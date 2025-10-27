@@ -1,0 +1,36 @@
+
+# Board Overlay Coordinate Guide
+
+To properly annotate your board image, you'll need to identify the pixel coordinates
+for each component. Here's how:
+
+1. Open the image in an image editor (Preview, GIMP, Photoshop, etc.)
+2. Use the cursor position indicator to find the x,y coordinates for each component
+3. Update the 'components' list in the create_board_overlay() function
+4. Re-run the script
+
+## Estimated positions (adjust based on your image):
+
+Based on typical board layout, components are usually located:
+- SD Card: Left side, middle
+- Speaker terminals: Right side, middle  
+- Audio jack: Right side, below speaker
+- Power input: Right side, top
+- I/O connections: Top center
+- SBUS: Left side, top
+- Maestro connections: Center
+- WiFi module: ESP32 chip location
+- DFPlayer: Small module near audio
+
+## Current placeholder coordinates:
+1. SD Card Slot: (100, 250)
+2. Speaker Output: (350, 320)
+3. 3.5mm Audio Jack: (350, 380)
+4. Power Input: (500, 200)
+5. I/O Connections: (450, 100)
+6. SBUS Input: (200, 100)
+7. Maestro Output: (300, 150)
+8. WiFi Module: (150, 200)
+9. DFPlayer Mini: (250, 300)
+
+Adjust these in the script for accurate placement.
