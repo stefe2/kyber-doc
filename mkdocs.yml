@@ -1,0 +1,76 @@
+site_name: Kyber Controller Documentation
+site_description: Documentation Example Hosted with MkDocs + Material on GitHub Pages
+site_url: https://stefe2.github.io/kyber-doc/
+repo_url: https://github.com/stefe2/kyber-doc
+repo_name: stefe2/kyber-doc
+
+theme:
+  name: material
+  language: en
+  logo: assets/kyber_logo.jpg
+  favicon: assets/kyber_logo.jpg
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Manual:
+      - Overview: manual/overview.md
+      - Hardware:
+          - Main Board Layout: manual/hardware/main-board.md
+          - Maestro Controllers: manual/hardware/maestro-controllers.md
+          - Servo Compatibility: manual/hardware/servo-compatibility.md
+          - Wiring Guide: manual/hardware/wiring.md
+      - Software:
+          - Installation: manual/software/installation.md
+          - Configuration: manual/software/configuration.md
+          - Web Interface: manual/software/web-interface.md
+      - Troubleshooting: manual/troubleshooting.md
+      - Usage Guide:
+          - Basic Controls: manual/usage/basic-controls.md
+          - Advanced Features: manual/usage/advanced-features.md
+          - Sound Configuration: manual/usage/sound-config.md
+  - FAQ: faq.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.snippets
+
+plugins:
+  - search

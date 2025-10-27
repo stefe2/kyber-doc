@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+.venv/
+.env
+
+# MkDocs site build (not needed for GitHub Pages when using gh-deploy)
+site/

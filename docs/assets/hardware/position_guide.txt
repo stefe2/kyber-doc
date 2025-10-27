@@ -1,0 +1,33 @@
+
+# How to Adjust Component Positions
+
+1. Open the original board image in an image viewer that shows cursor coordinates
+   - macOS: Use Preview, hover to see coordinates in info panel
+   - Windows: Use Paint, coordinates shown in status bar
+   - Or use any image editor
+
+2. Find the center point of each component:
+   - SD Card slot: Look for the SD card holder
+   - Speaker terminals: The screw terminals for speaker
+   - Audio jack: The 3.5mm jack
+   - Power input: Green screw terminal for power
+   - I/O connections: Header pins along the edge
+   - SBUS: Input pins for receiver
+   - Maestro: Output pins for servo controller
+   - ESP32: The main chip
+   - DFPlayer: Small MP3 module
+
+3. Update COMPONENT_POSITIONS in this script with correct coordinates
+
+4. Run the script again to generate updated images
+
+Current positions (update these):
+   ( 120,  400, "1", "SD Card Slot")
+   ( 850,  420, "2", "Speaker Output")
+   ( 850,  480, "3", "3.5mm Audio Jack")
+   ( 900,  250, "4", "Power Input")
+   ( 600,  150, "5", "I/O Connections")
+   ( 200,  150, "6", "SBUS Input")
+   ( 600,  250, "7", "Maestro Output")
+   ( 350,  350, "8", "ESP32 WiFi Module")
+   ( 700,  500, "9", "DFPlayer Mini")
