@@ -1,0 +1,15 @@
+.grid {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        flex-direction: column;
+    }
+    .grid img {
+        width: 100% !important;
+    }
+}
