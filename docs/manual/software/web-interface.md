@@ -21,111 +21,82 @@ The web interface is officially supported on:
 
 ## General Page
 
-The General Page is where you will do the basic configuration of the Kyber Controller
+The General Page is where you do basic configuration of the Kyber Controller
 
-![Dashboard](../../assets/web_interface/web_general.png){ align=center }
+![General](../../assets/web_interface/web_general.png){ align=center }
 
-### Features
+!!! note "Features"
+    #### Serial Command
+    Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
+    #### Human Cyborg Relations (HCR)
+    When enabled and saved, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
+---
+!!! note "RC Channels Settings"
+    #### Button PAD
+    Enter RC channel for the External Button PAD or Kyberpad.
+    
+    #### Toggle for PAD 2
+    Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
 
-#### Serial Command
-Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion.
+    #### Volume Control
+    Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
 
-#### Human Cyborg Relations (HCR)
-When enabled and saved, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
+    #### Buttons 1-2 3-4 5-6
+    Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
 
+    #### Random On/Off
+    Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
+---
+!!! note "Maestro"
+    ### Quantity
+    Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels.
+---
+!!! note "Sound"
+    ### Volume Level
+    If no RC channel is set for Volume Control, you can manually adjust Volume level from 0 to 30.
+    
+    ### Start Sound
+    Will be played after the Kyber boot sequence is finished.
+
+    ### Delay
+    Add a delay before playing Start Sound.
+
+    ### Equalizer
+    Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
+---
+!!! note "Registration"
+    Add the name of your droid or your own name.  This will be displayed on the web interface footer.
 ---
 
-### RC Channels Settings
+![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
 
-#### Button PAD
-Enter RC channel for the External Button PAD or Kyberpad.
-
-#### Toggle for PAD 2
-Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
-
-#### Volume Control
-Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
-
-#### Buttons 1-2 3-4 5-6
-Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
-
-#### Random On/Off
-Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
-
+!!! note "Human Cyborg Relation (HCR) menu"
+    Set a RC channel to control HCR volume.  You can use the same channel for all 3.
+    Set an offset to adjust the sound level for each HCR channels.
+    Set a startup Scrip to send a command to HCR when the Kyber boot.
+    Set a delay before sending the startup script.
 ---
 
-### Maestro
-Enter how many Maestro you will be using. Kyber support 1 or 2 Maestro, from 6 to 24 channels.
+![Maestro Menu](../../assets/web_interface/web_maestro.png){ align=center width=50% }
 
+!!! note "Maestro menu"
+    ### Startup Script
+    Will be played on Maestro 1 and/or 2 when the Kyber boot.
+    ### Delay
+    Set a delay to postpone the script.
+    ### Enable Script Check
+    Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
 ---
 
-### Sound
-If no RC channel is set for sound you can adjust Volume level from 0 to 30.
+![Sound Menu](../../assets/web_interface/web_sound.png){ align=center width=45% }
 
-Start Sound will be played when the Kyber boot and you can add a Delay.
-
-You can set the Equalizer to your liking.  This is a feature built in the DFPlayer.
-
+!!! note "Sound menu"
+    If RC channel is set for Volume Control, sound level will be displayed depending on the slider/pot position.  All other settings stay the same.
 ---
-
-### Registration
-Add the name of your droid or your own name.  This will be displayed in the footer part of the web interface.
-
----
-
-![Dashboard](../../assets/web_interface/web_HCR.png){ align=center }
-
-#### HCR menu:
-
-Set a RC channel to control volume.  You can use the same channel for all 3.
-
-Set an offset to adjust the sound level for each HCR channels.
-
-Set a startup Scrip to send a command to HCR when the Kyber boot.
-
-Set a delay before sending the startup script.
-
----
-
-![Dashboard](../../assets/web_interface/web_maestro.png){ align=center }
-
-#### Maestro menu:
-
-Set a startup script for Maestro 1 and/or 2 who will be run when the Kyber boot.  You can set a delay.
-
-Enable Script Check will be used to check if a script is already running before starting a new one.  If a script is running the new one will not start and the running script will be able to finish all the sequnence.
-
----
-
-![Dashboard](../../assets/web_interface/web_sound.png){ align=center }
-
-#### Sound menu:
-
-Once the RC channel is set the control will display the sound level.  All the other settings are the same.
+!!! tip "Save to Memory"
+    Do not forget to save to memory when you change a setting. Change will be lost if you click on top menu.
 
 
-
-
-Features
-
-- Serial Command - By enabling this feature, you will be able to enter a command to send via the serial port to any devices who can receiver serial commands. 
-- Human Cyborg Relations - By enabling this feature, a new menu item will be displayed in the General Page where you will be able to configure the HCR.
-
-![Dashboard](../../assets/web_interface/web_HCR.png){ align=center }
-
-2. **Channel Overview**
-   - Real-time servo positions
-   - Channel status indicators
-   - Quick position adjustments
-   - Group status display
-
-3. **Alert Panel**
-   - System notifications
-   - Error messages
-   - Warning indicators
-   - Status updates
-
-### Control Panel
 
 #### RC Channels
 ![RC Channels](../../assets/web_interface/web_rc_channels.png){ align=center }
@@ -257,3 +228,39 @@ To access your Kyber Control System from outside your local network:
     - Use a firewall to restrict access
     - Consider using a VPN for secure remote connections
     - Regularly update your system firmware
+
+!!! note "Custom Title"
+    This is a note admonition. The title is optional.
+
+!!! abstract "Abstract"
+    Also known as "summary" or "tldr"
+
+!!! info "Info"
+    Additional information
+
+!!! tip "Tip"
+    Also known as "hint" or "important"
+
+!!! success "Success"
+    Also known as "check" or "done"
+
+!!! question "Question"
+    Also known as "help" or "faq"
+
+!!! warning "Warning"
+    Also known as "caution" or "attention"
+
+!!! failure "Failure"
+    Also known as "fail" or "missing"
+
+!!! danger "Danger"
+    Also known as "error"
+
+!!! bug "Bug"
+    Report a bug
+
+!!! example "Example"
+    An example
+
+!!! quote "Quote"
+    Also known as "cite"
