@@ -1,29 +1,41 @@
 # Kyber Controls Manual
 
-Welcome to the comprehensive manual for the Kyber Control System, an advanced RC robotic control system designed for precise servo manipulation and control.
+Welcome to the online manual for the Kyber Control System, a comprehensive RC robotic control system that provides advanced
+sound playback, servo control, and wireless configuration capabilities. 
 
 ![Kyber Controls Logo](../assets/misc/kyber_logo.jpg){ align=center }
-
-## System Overview
-
-The Kyber Control System is a sophisticated solution for:
-
-- Remote control of servo motors
-- Sound effect management
-- Precise timing control
-- Web-based interface control
-
+<br>
 !!! info "Manual Version"
-    This manual covers Kyber Control System Version 3.0
+    This manual covers firmware version 159 and later.
 
-## Key Features
+---
 
-| Feature | Description |
-|---------|------------|
-| Servo Control | Multiple servo control channels with precise timing |
-| Sound Effects | Built-in sound management system |
-| Web Interface | Browser-based control interface |
-| Expandability | Support for various Maestro controllers |
+### Key Features
+- Support for up to 45 configurable buttons (3 pads of 15 buttons each)
+- 24-channel SBUS support (SBUS16 and SBUS24)
+- Dual Maestro servo controller support (up to 48 servos)
+- WiFi configuration interface with modern responsive design
+- Random sounds and animations
+- Marcduino integration
+- Emergency stop functionality
+- Real-time configuration without rebooting
+
+### Hardware Requirements
+- ESP32-based Kyber main board
+- Compatible RC receiver with SBUS output
+- DFPlayer Mini or compatible MP3 player module
+- SD card with MP3 files
+- 7.5V to 36V power supply
+- USB connection for programming
+- Optional: Pololu Maestro servo controllers
+- Optional: Servos and associated hardware
+
+### Software Requirements
+- Windows 10/11 or compatible operating system
+- Modern web browser for interface control
+- Internet connection for initial setup
+
+---
 
 ## Quick Start Guide
 
@@ -31,21 +43,10 @@ The Kyber Control System is a sophisticated solution for:
 2. Follow the [Software Installation](software/installation.md)
 3. Learn [Basic Controls](usage/basic-controls.md)
 
+<br>
+
 !!! tip "Getting Started"
     If you're new to the Kyber Control System, we recommend starting with the [Basic Controls](usage/basic-controls.md) section.
-
-## System Requirements
-
-### Hardware Requirements
-- Compatible Maestro controller
-- Power supply (specifications in [Hardware Setup](hardware/main-board.md))
-- USB connection for programming
-- Servos and associated hardware
-
-### Software Requirements
-- Windows 10/11 or compatible operating system
-- Modern web browser for interface control
-- Internet connection for initial setup
 
 ## Support
 
@@ -53,4 +54,4 @@ For technical support and troubleshooting:
 
 - Check the [FAQ](../faq.md) section
 - Review [Troubleshooting Guide](usage/advanced-features.md#troubleshooting)
-- Contact technical support
+- Contact technical support on Discord

@@ -2,9 +2,9 @@
 
 The Kyber Control System provides a powerful web-based interface for configuration. The interface is designed to be intuitive and responsive, allowing you to configure your system from any supported web browser.
 
-![Web Interface Home](../../assets/web_interface/web_home.png){ align=center }
+![Web Interface Home](../../assets/web_interface/web_home.png)
 
-!!! note "Interface Overview"
+!!! info "Interface Overview"
     Top menu provides quick access to all major functions of the system.  
     The web interface will adjust dynamically to your configuration.
 
@@ -19,7 +19,9 @@ The web interface is officially supported on:
 !!! tip "Browser Recommendation"
     For the best experience, we recommend using Google Chrome as it provides optimal performance and compatibility.
 
-## General Page
+---
+<br><br>
+# General Page
 
 The General Page is where you do basic configuration of the Kyber Controller
 
@@ -29,81 +31,57 @@ The General Page is where you do basic configuration of the Kyber Controller
 
 ![General](../../assets/web_interface/web_general_features.png){ align=center }
 
-!!! note "Features"
-    #### Serial Command
-    Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
-    #### Human Cyborg Relations (HCR)
-    When enabled and saved, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
+!!! info "Features"
+     - **Serial Command** - Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
+     - **Human Cyborg Relations (HCR)** - When enabled, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
 ---
 ![General](../../assets/web_interface/web_general_RC.png){ align=center }
-!!! note "RC Channels Settings"
-    #### Button PAD
-    Enter RC channel for the External Button PAD or Kyberpad.
-    
-    #### Toggle for PAD 2
-    Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
-
-    #### Volume Control
-    Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
-
-    #### Buttons 1-2 3-4 5-6
-    Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
-
-    #### Random On/Off
-    Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
+!!! info "RC Channels Settings"
+     - **Button PAD** - Enter RC channel for the External Button PAD or Kyberpad.
+     - **Toggle for PAD 2** - Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
+     - **Volume Control** - Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
+     - **Buttons 1-2 3-4 5-6** - Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
+     - **Random On/Off** - Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
 ---
 ![General](../../assets/web_interface/web_general_maestro.png){ align=center }
-!!! note "Maestro"
-    ### Quantity
-    Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed.
+!!! info "Maestro"
+     - **Quantity** - Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed.
 ---
 ![General](../../assets/web_interface/web_general_maestro2.png){ align=center }
-!!! note "Maestro menu"
-    ### Startup Script
-    A script Will play on selected Maestro after Kyber boot.
-    ### Delay
-    Set a delay to postpone the script.
-    ### Enable Script Check
-    Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
+!!! info "Maestro menu"
+     - **Startup Script** - A script Will play on selected Maestro after Kyber boot.
+     - **Delay** - Set a delay to postpone the script.
+     - **Enable Script Check** - Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
 ---
 <div class="grid" markdown>
 ![Image1](../../assets/web_interface/web_general_sound1.png){ width="36%" align=left }
 ![Image2](../../assets/web_interface/web_general_sound2.png){ width="40%" align=right }
 </div>
-!!! note "Sound"
-    ### Volume Level
-    Left picture is when no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30.
 
-    Right picture with RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position.
-    ### Start Sound
-    Will be played after the Kyber boot sequence is finished.
-    ### Delay
-    Add a delay before playing Start Sound.
-    ### Equalizer
-    Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
+!!! info "Sound"
+     - **Volume Level** - Left picture, no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30. Right picture, RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position.
+     - **Start Sound** - Will be played after the Kyber boot sequence is finished.
+     - **Delay** - Add a delay before playing Start Sound.
+     - **Equalizer** - Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
 ---
 ![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
 
-!!! note "Human Cyborg Relation (HCR) menu"
-    ### RC Channel
-    Used to control HCR volume.  You can use the same channel for all 3.
-    ### Offset
-    Used to adjust the sound level offset between each HCR channels.
-    ### Startup Scrip
-    Used to send a command to HCR when the Kyber boot.
-    ### Delay
-    Used to postpone startup script.
+!!! info "Human Cyborg Relation (HCR) menu"
+     - **RC Channel** - Used to control HCR volume.  You can use the same channel for all 3.
+     - **Offset** - Used to adjust the sound level offset between each HCR channels.
+     - **Startup Scrip** - Used to send a command to HCR when the Kyber boot.
+     - **Delay** - Used to postpone startup script.
 ---
-![General](../../assets/web_interface/web_general_registration.png){ align=center width=60% }
-!!! note "Registration"
+![General](../../assets/web_interface/web_general_registration.png){ align=center width=50% }
+!!! info "Registration"
     Add the name of your droid or your own name.  This will be displayed on the web interface footer.
 ---
-!!! tip "Save to Memory"
-    Do not forget to save to memory when you change a setting. Change will be lost if you click on top menu.
+!!! warning "Save to Memory"
+    Do not forget to save to memory when you edit settings. Change will be lost if you click on top menu.
+---
+<br><br>
 
-
-
-#### RC Channels
+# RC Channels
 ![RC Channels](../../assets/web_interface/web_rc_channels.png){ align=center }
 
 The RC Channels panel provides precise control over your servo channels:
@@ -211,7 +189,7 @@ The interface automatically adapts to mobile devices:
 2. Navigate to `http://localhost:8080` (default address)
 3. The interface will load automatically (no login required)
 
-!!! note "Default Port"
+!!! info "Default Port"
     The default port is 8080. If you need to change this, you can modify it in the system settings.
 
 ### Remote Access
@@ -233,7 +211,7 @@ To access your Kyber Control System from outside your local network:
     - Consider using a VPN for secure remote connections
     - Regularly update your system firmware
 
-!!! note "Custom Title"
+!!! info "Custom Title"
     This is a note admonition. The title is optional.
 
 !!! abstract "Abstract"
