@@ -25,12 +25,17 @@ The General Page is where you do basic configuration of the Kyber Controller
 
 ![General](../../assets/web_interface/web_general.png){ align=center }
 
+---
+
+![General](../../assets/web_interface/web_general_features.png){ align=center }
+
 !!! note "Features"
     #### Serial Command
     Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
     #### Human Cyborg Relations (HCR)
     When enabled and saved, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
 ---
+![General](../../assets/web_interface/web_general_RC.png){ align=center }
 !!! note "RC Channels Settings"
     #### Button PAD
     Enter RC channel for the External Button PAD or Kyberpad.
@@ -47,51 +52,51 @@ The General Page is where you do basic configuration of the Kyber Controller
     #### Random On/Off
     Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
 ---
+![General](../../assets/web_interface/web_general_maestro.png){ align=center }
 !!! note "Maestro"
     ### Quantity
-    Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels.
+    Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed.
 ---
-!!! note "Sound"
-    ### Volume Level
-    If no RC channel is set for Volume Control, you can manually adjust Volume level from 0 to 30.
-    
-    ### Start Sound
-    Will be played after the Kyber boot sequence is finished.
-
-    ### Delay
-    Add a delay before playing Start Sound.
-
-    ### Equalizer
-    Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
----
-!!! note "Registration"
-    Add the name of your droid or your own name.  This will be displayed on the web interface footer.
----
-
-![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
-
-!!! note "Human Cyborg Relation (HCR) menu"
-    Set a RC channel to control HCR volume.  You can use the same channel for all 3.
-    Set an offset to adjust the sound level for each HCR channels.
-    Set a startup Scrip to send a command to HCR when the Kyber boot.
-    Set a delay before sending the startup script.
----
-
-![Maestro Menu](../../assets/web_interface/web_maestro.png){ align=center width=50% }
-
+![General](../../assets/web_interface/web_general_maestro2.png){ align=center }
 !!! note "Maestro menu"
     ### Startup Script
-    Will be played on Maestro 1 and/or 2 when the Kyber boot.
+    A script Will play on selected Maestro after Kyber boot.
     ### Delay
     Set a delay to postpone the script.
     ### Enable Script Check
     Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
 ---
+<div class="grid" markdown>
+![Image1](../../assets/web_interface/web_general_sound1.png){ width="36%" align=left }
+![Image2](../../assets/web_interface/web_general_sound2.png){ width="40%" align=right }
+</div>
+!!! note "Sound"
+    ### Volume Level
+    Left picture is when no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30.
 
-![Sound Menu](../../assets/web_interface/web_sound.png){ align=center width=45% }
+    Right picture with RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position.
+    ### Start Sound
+    Will be played after the Kyber boot sequence is finished.
+    ### Delay
+    Add a delay before playing Start Sound.
+    ### Equalizer
+    Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
+---
+![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
 
-!!! note "Sound menu"
-    If RC channel is set for Volume Control, sound level will be displayed depending on the slider/pot position.  All other settings stay the same.
+!!! note "Human Cyborg Relation (HCR) menu"
+    ### RC Channel
+    Used to control HCR volume.  You can use the same channel for all 3.
+    ### Offset
+    Used to adjust the sound level offset between each HCR channels.
+    ### Startup Scrip
+    Used to send a command to HCR when the Kyber boot.
+    ### Delay
+    Used to postpone startup script.
+---
+![General](../../assets/web_interface/web_general_registration.png){ align=center width=60% }
+!!! note "Registration"
+    Add the name of your droid or your own name.  This will be displayed on the web interface footer.
 ---
 !!! tip "Save to Memory"
     Do not forget to save to memory when you change a setting. Change will be lost if you click on top menu.
@@ -156,7 +161,6 @@ The firmware section enables:
 - System recovery options
 
 ## Mobile Interface
-![Mobile View](../../assets/web_interface/mobile.jpg){ align=center }
 
 The interface automatically adapts to mobile devices:
 

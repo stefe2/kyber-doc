@@ -9,6 +9,9 @@ theme:
   language: en
   logo: assets/kyber_logo.jpg
   favicon: assets/kyber_logo.jpg
+  custom_dir: docs
+  extra_css:
+    - assets/stylesheets/extra.css
   features:
     - navigation.instant
     - navigation.tabs
