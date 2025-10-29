@@ -539,51 +539,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connection-points" class="md-nav__link">
+  <a href="#main-board-layout_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Connection Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Input
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usb-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      USB Connection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#servo-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Servo Channels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#board-legend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Legend
+      Main Board Layout
     </span>
   </a>
   
@@ -602,15 +560,6 @@
   <a href="#specifications" class="md-nav__link">
     <span class="md-ellipsis">
       Specifications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#board-protection-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Protection Features
     </span>
   </a>
   
@@ -1057,51 +1006,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connection-points" class="md-nav__link">
+  <a href="#main-board-layout_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Connection Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Input
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usb-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      USB Connection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#servo-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Servo Channels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#board-legend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Legend
+      Main Board Layout
     </span>
   </a>
   
@@ -1120,15 +1027,6 @@
   <a href="#specifications" class="md-nav__link">
     <span class="md-ellipsis">
       Specifications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#board-protection-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Protection Features
     </span>
   </a>
   
@@ -1165,31 +1063,45 @@
 <h1 id="main-board-layout">Main Board Layout<a class="headerlink" href="#main-board-layout" title="Permanent link">&para;</a></h1>
 <p>This section provides detailed information about the Kyber Control System main board layout and connections.</p>
 <h2 id="board-overview">Board Overview<a class="headerlink" href="#board-overview" title="Permanent link">&para;</a></h2>
-<p><img align="center" alt="Main Board Layout" src="../../../assets/hardware/main_board_layout_annotated.jpg" /></p>
-<h2 id="connection-points">Connection Points<a class="headerlink" href="#connection-points" title="Permanent link">&para;</a></h2>
-<h3 id="power-input">Power Input<a class="headerlink" href="#power-input" title="Permanent link">&para;</a></h3>
+<p><img align="center" alt="Main Board Layout" src="../../../assets/hardware/main_board_layout_labeled.png" /></p>
+<h2 id="main-board-layout_1">Main Board Layout<a class="headerlink" href="#main-board-layout_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Power Input</strong>         - 7.5V to 36V DC</li>
+<li><strong>Power Converter</strong>     - 5V output, 2.5A maximum current</li>
+<li><strong>Serial Command Port</strong> - Send serial command to external devices (default 9600 bps)</li>
+<li><strong>Maestro Serial Port</strong> - Pololu Maestro control port (default 67600 bps)</li>
+<li><strong>sBus Input Port</strong>     - Connect receiver sBus out (16 and 24 channels support)</li>
+<li><strong>Running LED</strong>         - Display Kyber Status</li>
+<li><strong>Reset Button</strong>        - Reset Kyber. Pressing 2 time reset under 5 seconds will reset WiFi SSID and password to default.</li>
+<li><strong>ESP32 USB Port</strong>      - Connect a serial terminal for Real-time monitoring (default 115200 bps)</li>
+<li><strong>Speaker Output</strong>      - Amplified speaker output, 3W maximum</li>
+<li><strong>DFPlayer</strong>           - DFRobot DFPlayer device, support MP3 playback, LED will light when playing  </li>
+<li><strong>SD Card Slot</strong>       - Support SD card up to 16GB, place MP3 files under MP3 folder at the root of the card</li>
+<li><strong>3.5mm Audio Jack</strong>   - For external amplifier connection. If you experience noise in the system you may need to install a ground loop isolator between the Kyber and the amplifier</li>
+<li><strong>WiFi Enable</strong>        - Place a jumper or a toggle switch between <strong>GND</strong> and <strong>SIG</strong> to turn ON WiFi</li>
+<li><strong>ESP32 Chip</strong>         - Give your droid a Kyber heart</li>
+</ol>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
 <ul>
-<li><strong>VIN</strong>: 7.4V - 12V DC input</li>
-<li><strong>GND</strong>: Ground connection</li>
-<li><strong>Power LED</strong>: Indicates power status</li>
+<li>Maximum speaker power: 3 Watts</li>
+<li>Maximum 5V output current: 2.5 Amps</li>
+<li>Use ground loop isolator if experiencing audio noise</li>
+<li>Never exceed voltage ratings</li>
+<li>Turn OFF WiFi when not in use.</li>
 </ul>
-<h3 id="usb-connection">USB Connection<a class="headerlink" href="#usb-connection" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Programming interface</li>
-<li>Configuration updates</li>
-<li>Real-time monitoring</li>
-</ul>
-<h3 id="servo-channels">Servo Channels<a class="headerlink" href="#servo-channels" title="Permanent link">&para;</a></h3>
-<p>Multiple servo connection points with:
-- Power distribution
-- Signal routing
-- Status LEDs</p>
-<h2 id="board-legend">Board Legend<a class="headerlink" href="#board-legend" title="Permanent link">&para;</a></h2>
-<p><img align="center" alt="Board Legend" src="../../../assets/hardware/main_board_legend.jpg" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>Always verify power polarity before connecting. Incorrect connections may damage the board.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Use high-quality connectors and cables for reliable operation.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Voltage Warning</p>
+<ul>
+<li>Always verify power polarity before connecting, incorrect connections may damage the board.</li>
+</ul>
+</div>
+<hr />
 <h2 id="installation-guidelines">Installation Guidelines<a class="headerlink" href="#installation-guidelines" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Mount the board securely using provided mounting points</li>
@@ -1208,37 +1120,30 @@
 <tbody>
 <tr>
 <td>Input Voltage</td>
-<td>7.4V - 12V DC</td>
+<td>7.5V - 36V DC</td>
 </tr>
 <tr>
 <td>Max Current</td>
-<td>5A continuous</td>
-</tr>
-<tr>
-<td>Servo Channels</td>
-<td>Up to 6 per board</td>
+<td>2.5A continuous</td>
 </tr>
 <tr>
 <td>Size</td>
-<td>100mm x 60mm</td>
+<td>70mm x 60mm</td>
 </tr>
 <tr>
 <td>Weight</td>
 <td>45g</td>
 </tr>
+<tr>
+<td>Servo Channels</td>
+<td>Up to 24 per Maestro</td>
+</tr>
+<tr>
+<td>sBus</td>
+<td>16 and 24 channels</td>
+</tr>
 </tbody>
 </table>
-<h2 id="board-protection-features">Board Protection Features<a class="headerlink" href="#board-protection-features" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Reverse polarity protection</li>
-<li>Over-current protection</li>
-<li>Thermal shutdown</li>
-<li>Voltage monitoring</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Best Practice</p>
-<p>Use high-quality connectors and cables for reliable operation.</p>
-</div>
 <h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../wiring/">Wiring Guide</a></li>
