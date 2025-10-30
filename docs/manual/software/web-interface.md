@@ -99,32 +99,32 @@ Start Kyber configuration with this page first
 
 The RC Settings Page is where you do most of the configuration for the RC channels.  This page will adapt depending of the configuration you made in General Page
 
-![RC Channels](../../assets/web_interface/web_RC.png){ align=center }
+![RC Settings](../../assets/web_interface/web_RC.png){ align=center }
 
 !!! failure "Fail"
      - No sBus connexion from the receiver to the Kyber, check wiring and receiver configuration
-     ![RC Channels](../../assets/web_interface/web_RC_red.png){ align=center }
+     ![RC Settings](../../assets/web_interface/web_RC_red.png){ align=center }
 
 !!! success "Success"
      - Good sBus connexion from the receiver to the Kyber, support sbus16 and sbus24
-     ![RC Channels](../../assets/web_interface/web_RC_green16.png){ align=center }
-     ![RC Channels](../../assets/web_interface/web_RC_green24.png){ align=center }
+     ![RC Settings](../../assets/web_interface/web_RC_green16.png){ align=center }
+     ![RC Settings](../../assets/web_interface/web_RC_green24.png){ align=center }
 ---
-![RC Channels](../../assets/web_interface/web_RC_PAD23.png){ align=center width=75% }
+![RC Settings](../../assets/web_interface/web_RC_PAD23.png){ align=center width=75% }
 ## Button PAD Configuration
 - **Button PAD Mode** - Select 3 pads for a 3 positions toggle switch and 2 pads for a 2 positions
 - **Toggle Channel** - Display RC channel set under General web page
 - **Current SBUS Value** - Display SBUS value of the switch position coming from RC channel
 - **Pad 1-2-3 SBUS Value** - Toggle the switch and write the current SBUS value for each toggle positions
 ---
-![RC Channels](../../assets/web_interface/web_RC_Buttons.png){ align=center width=60% }
+![RC Settings](../../assets/web_interface/web_RC_Buttons.png){ align=center width=60% }
 ## Button Values Configuration
 - This is where you will register each buttons PWM value for your configuration (Kyberpad or physical buttons)
 - **Ch x SBUS Values** - Display the PWM value of RC channel x set under General tab.  Value displayed without pressing any buttons will be the released state
 - **Button x PWM Value** - Register each buttons value in this field
 - **Released PWM Value** - Register the released state value in this field
 ---
-![RC Channels](../../assets/web_interface/web_RC_Passthrough.png){ align=center width=100% }
+![RC Settings](../../assets/web_interface/web_RC_Passthrough.png){ align=center width=100% }
 ## RC Channels Pass Through
 - Passthrough are used to map a RC channel to a Maestro servo output.  This give direct control on multiple servos
 - **Description** - Enter a descrition or a name for the passthrough
@@ -146,19 +146,42 @@ The RC Settings Page is where you do most of the configuration for the RC channe
      Since Deadband is disabled, the servo cannot be controlled by a script
 ---
 
+## Button Configuration Page
 
+The Button Configuration Page is where all the buttons will be given a funtion.  It's the main feature of the Kyber Controller.
 
+![Button Configuration](../../assets/web_interface/web_buttons_overview.png){ align=center width=100% }
 
+- **PAD 1-2-3** - Depending on your configuration, PAD 1, 2 and 3 will be displayed.  Chose one to edit the buttons for this PAD
+- **Name** - Enter a descrition for the Button
+- **Sound MIN** - Set MIN sound to play.
+- **Sound MAX** - Set MAX sound to play
+- **Sound Delay** - Set a Delay before playing a sound.
+- **Sound Random** - Sounds will be played randomly if a range is set between MIN and MAX
+- **Maestro Script** - Set script number to play
+- **Maestro Script2** - Set second script number to play
+- **Maestro Script Delay** - Set a delay before playing a script
+- **Serial Command** - Enter commands to be sent to Serial port. Need to finish with "\r" to be executed
+- **Stop All** - This button will be the same on all PADs.  It stop sounds and action immediately.  A serial command can be send too
 
+!!! hint "Sounds Tip"
+     - **MIN/MAX** - To play only one sound, set the same value for MIN and MAX 
+     - **Delay**  - Helpul to sync sound and motion
+     - **Random** - If not selected, sound will play sequentially
 
+!!! hint "Maestro Tip"
+     - **Script** Script will always be played sequentially. For only one sricpt, set the same value for both 
+     - **Delay** Helpful to sync sound and motion
 
+!!! example "Example"
+     - **Button 1** - Play Sound #1 on each button press, play script #1 on first button press and play script #2 on second button press
+         - 1st press = open door
+         - 2nd press = close door
+     - **Button 2** - Play sounds 5 to 10 in a random order.  Sound will never be played 2 ime in a row
+     - **Button 3** - Play "The Wave" sequence on Marcduino, at the same time play sound #2 with a slight delay to sync with motion
 
-The RC Channels panel provides precise control over your servo channels:
+---
 
-- Real-time position control
-- Channel status monitoring
-- Individual channel configuration
-- Quick position adjustments
 
 #### Button Controls
 ![Button Overview](../../assets/web_interface/web_buttons_overview.png){ align=center }
