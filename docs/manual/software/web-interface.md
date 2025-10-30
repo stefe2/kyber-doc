@@ -18,12 +18,11 @@ The web interface is officially supported on:
 
 !!! tip "Browser Recommendation"
     For the best experience, we recommend using Google Chrome as it provides optimal performance and compatibility.
-
 ---
-<br><br>
-# General Page
+## General Page
 
-The General Page is where you do basic configuration of the Kyber Controller
+The General Page is where you do basic configuration of the Kyber Controller.  
+Start Kyber configuration with this page first
 
 ![General](../../assets/web_interface/web_general.png){ align=center }
 
@@ -31,58 +30,128 @@ The General Page is where you do basic configuration of the Kyber Controller
 
 ![General](../../assets/web_interface/web_general_features.png){ align=center }
 
-!!! info "Features"
-     - **Serial Command** - Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
-     - **Human Cyborg Relations (HCR)** - When enabled, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino".
+## Features
+- **Serial Command** - Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
+- **Human Cyborg Relations (HCR)** - When enabled, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino"
+
 ---
+
 ![General](../../assets/web_interface/web_general_RC.png){ align=center }
-!!! info "RC Channels Settings"
-     - **Button PAD** - Enter RC channel for the External Button PAD or Kyberpad.
-     - **Toggle for PAD 2** - Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
-     - **Volume Control** - Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
-     - **Buttons 1-2 3-4 5-6** - Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
-     - **Random On/Off** - Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
+## RC Channels Settings
+- **Button PAD** - Enter RC channel for the External Button PAD or Kyberpad.
+- **Toggle for PAD 2** - Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
+- **Volume Control** - Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
+- **Buttons 1-2 3-4 5-6** - Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)
+- **Random On/Off** - Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)
+
 ---
+
 ![General](../../assets/web_interface/web_general_maestro.png){ align=center }
-!!! info "Maestro"
-     - **Quantity** - Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed.
+## Maestro
+- **Quantity** - Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed
+
 ---
+
 ![General](../../assets/web_interface/web_general_maestro2.png){ align=center }
-!!! info "Maestro menu"
-     - **Startup Script** - A script Will play on selected Maestro after Kyber boot.
-     - **Delay** - Set a delay to postpone the script.
-     - **Enable Script Check** - Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
+## Maestro menu
+- **Startup Script** - A script Will play on selected Maestro after Kyber boot.
+- **Delay** - Set a delay to postpone the script.
+- **Enable Script Check** - Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
+
 ---
+
 <div class="grid" markdown>
 ![Image1](../../assets/web_interface/web_general_sound1.png){ width="36%" align=left }
 ![Image2](../../assets/web_interface/web_general_sound2.png){ width="40%" align=right }
 </div>
 
-!!! info "Sound"
-     - **Volume Level** - Left picture, no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30. Right picture, RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position.
-     - **Start Sound** - Will be played after the Kyber boot sequence is finished.
-     - **Delay** - Add a delay before playing Start Sound.
-     - **Equalizer** - Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
----
-![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
+## Sound
+- **Volume Level** - Left picture: no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30
 
-!!! info "Human Cyborg Relation (HCR) menu"
-     - **RC Channel** - Used to control HCR volume.  You can use the same channel for all 3.
-     - **Offset** - Used to adjust the sound level offset between each HCR channels.
-     - **Startup Scrip** - Used to send a command to HCR when the Kyber boot.
-     - **Delay** - Used to postpone startup script.
+- **Volume Level** - Right picture: RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position
+
+- **Start Sound** - Will be played after the Kyber boot sequence is finished.
+- **Delay** - Add a delay before playing Start Sound.
+- **Equalizer** - Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
+
 ---
+
+![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
+## Human Cyborg Relation (HCR)
+- **RC Channel** - Used to control HCR volume.  You can use the same channel for all 3.
+- **Offset** - Used to adjust the sound level offset between each HCR channels.
+- **Startup Scrip** - Used to send a command to HCR when the Kyber boot.
+- **Delay** - Used to postpone startup script.
+
+---
+
 ![General](../../assets/web_interface/web_general_registration.png){ align=center width=50% }
-!!! info "Registration"
-    Add the name of your droid or your own name.  This will be displayed on the web interface footer.
+## Registration
+- Add the name of your droid or your own name.  This will be displayed on the web interface footer
+
 ---
+
 !!! warning "Save to Memory"
     Do not forget to save to memory when you edit settings. Change will be lost if you click on top menu.
 ---
-<br><br>
 
-# RC Channels
-![RC Channels](../../assets/web_interface/web_rc_channels.png){ align=center }
+## RC Settings Page
+
+The RC Settings Page is where you do most of the configuration for the RC channels.  This page will adapt depending of the configuration you made in General Page
+
+![RC Channels](../../assets/web_interface/web_RC.png){ align=center }
+
+!!! failure "Fail"
+     - No sBus connexion from the receiver to the Kyber, check wiring and receiver configuration
+     ![RC Channels](../../assets/web_interface/web_RC_red.png){ align=center }
+
+!!! success "Success"
+     - Good sBus connexion from the receiver to the Kyber, support sbus16 and sbus24
+     ![RC Channels](../../assets/web_interface/web_RC_green16.png){ align=center }
+     ![RC Channels](../../assets/web_interface/web_RC_green24.png){ align=center }
+---
+![RC Channels](../../assets/web_interface/web_RC_PAD23.png){ align=center width=75% }
+## Button PAD Configuration
+- **Button PAD Mode** - Select 3 pads for a 3 positions toggle switch and 2 pads for a 2 positions
+- **Toggle Channel** - Display RC channel set under General web page
+- **Current SBUS Value** - Display SBUS value of the switch position coming from RC channel
+- **Pad 1-2-3 SBUS Value** - Toggle the switch and write the current SBUS value for each toggle positions
+---
+![RC Channels](../../assets/web_interface/web_RC_Buttons.png){ align=center width=60% }
+## Button Values Configuration
+- This is where you will register each buttons PWM value for your configuration (Kyberpad or physical buttons)
+- **Ch x SBUS Values** - Display the PWM value of RC channel x set under General tab.  Value displayed without pressing any buttons will be the released state
+- **Button x PWM Value** - Register each buttons value in this field
+- **Released PWM Value** - Register the released state value in this field
+---
+![RC Channels](../../assets/web_interface/web_RC_Passthrough.png){ align=center width=100% }
+## RC Channels Pass Through
+- Passthrough are used to map a RC channel to a Maestro servo output.  This give direct control on multiple servos
+- **Description** - Enter a descrition or a name for the passthrough
+- **RC Channel** - Set the RC channel you want to use. First you need to do a mix in the remote and assign it to a channel.
+- **Maestro ID** - Set the ID of the Maestro you want to control. (1 or 2)
+- **Maestro Channel** - Set the channel of the Maestro you want to control (0 to 23)
+- **Maestro PWM Min/Max** - Set min and max PWM for this channel.
+- **Maestro Disable Deadband** - Select for direct control on the servo without a deadband.
+
+!!! hint "Tip"
+     - Same RC channel can be used multiple time
+     - PWM MIN and MAX can be inverted to change servo direction
+     - If you set servo limit in Maestro Control Center, use the same values for MIN and MAX
+     - Disabling Deadband will prevent the servo to move freely if used in a script (Maestro limitation)
+
+!!! example "Example"
+     - Servo #1 is connected to Maestro #1 port 5 and controlled by RC channel #1
+     - Servo #2 is connected to Maestro #2 port 6 and controlled by RC channel #2.  
+     Since Deadband is disabled, the servo cannot be controlled by a script
+---
+
+
+
+
+
+
+
 
 The RC Channels panel provides precise control over your servo channels:
 
