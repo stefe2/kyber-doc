@@ -831,7 +831,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="RC Channels Pass Through">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-configuration-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Configuration Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Button Configuration Page">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1309,7 +1318,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="RC Channels Pass Through">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-configuration-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Configuration Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Button Configuration Page">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1553,24 +1571,24 @@ Start Kyber configuration with this page first</p>
 <hr />
 <h2 id="rc-settings-page">RC Settings Page<a class="headerlink" href="#rc-settings-page" title="Permanent link">&para;</a></h2>
 <p>The RC Settings Page is where you do most of the configuration for the RC channels.  This page will adapt depending of the configuration you made in General Page</p>
-<p><img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC.png" /></p>
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC.png" /></p>
 <div class="admonition failure">
 <p class="admonition-title">Fail</p>
 <ul>
 <li>No sBus connexion from the receiver to the Kyber, check wiring and receiver configuration
- <img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_red.png" /></li>
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_red.png" /></li>
 </ul>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <ul>
 <li>Good sBus connexion from the receiver to the Kyber, support sbus16 and sbus24
- <img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_green16.png" />
- <img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_green24.png" /></li>
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_green16.png" />
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_green24.png" /></li>
 </ul>
 </div>
 <hr />
-<p><img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_PAD23.png" width="75%" /></p>
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_PAD23.png" width="75%" /></p>
 <h2 id="button-pad-configuration">Button PAD Configuration<a class="headerlink" href="#button-pad-configuration" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Button PAD Mode</strong> - Select 3 pads for a 3 positions toggle switch and 2 pads for a 2 positions</li>
@@ -1579,7 +1597,7 @@ Start Kyber configuration with this page first</p>
 <li><strong>Pad 1-2-3 SBUS Value</strong> - Toggle the switch and write the current SBUS value for each toggle positions</li>
 </ul>
 <hr />
-<p><img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_Buttons.png" width="60%" /></p>
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_Buttons.png" width="60%" /></p>
 <h2 id="button-values-configuration">Button Values Configuration<a class="headerlink" href="#button-values-configuration" title="Permanent link">&para;</a></h2>
 <ul>
 <li>This is where you will register each buttons PWM value for your configuration (Kyberpad or physical buttons)</li>
@@ -1588,7 +1606,7 @@ Start Kyber configuration with this page first</p>
 <li><strong>Released PWM Value</strong> - Register the released state value in this field</li>
 </ul>
 <hr />
-<p><img align="center" alt="RC Channels" src="../../../assets/web_interface/web_RC_Passthrough.png" width="100%" /></p>
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_Passthrough.png" width="100%" /></p>
 <h2 id="rc-channels-pass-through">RC Channels Pass Through<a class="headerlink" href="#rc-channels-pass-through" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Passthrough are used to map a RC channel to a Maestro servo output.  This give direct control on multiple servos</li>
@@ -1617,13 +1635,50 @@ Start Kyber configuration with this page first</p>
 </ul>
 </div>
 <hr />
-<p>The RC Channels panel provides precise control over your servo channels:</p>
+<h2 id="button-configuration-page">Button Configuration Page<a class="headerlink" href="#button-configuration-page" title="Permanent link">&para;</a></h2>
+<p>The Button Configuration Page is where all the buttons will be given a funtion.  It's the main feature of the Kyber Controller.</p>
+<p><img align="center" alt="Button Configuration" src="../../../assets/web_interface/web_buttons_overview.png" width="100%" /></p>
 <ul>
-<li>Real-time position control</li>
-<li>Channel status monitoring</li>
-<li>Individual channel configuration</li>
-<li>Quick position adjustments</li>
+<li><strong>PAD 1-2-3</strong> - Depending on your configuration, PAD 1, 2 and 3 will be displayed.  Chose one to edit the buttons for this PAD</li>
+<li><strong>Name</strong> - Enter a descrition for the Button</li>
+<li><strong>Sound MIN</strong> - Set MIN sound to play.</li>
+<li><strong>Sound MAX</strong> - Set MAX sound to play</li>
+<li><strong>Sound Delay</strong> - Set a Delay before playing a sound.</li>
+<li><strong>Sound Random</strong> - Sounds will be played randomly if a range is set between MIN and MAX</li>
+<li><strong>Maestro Script</strong> - Set script number to play</li>
+<li><strong>Maestro Script2</strong> - Set second script number to play</li>
+<li><strong>Maestro Script Delay</strong> - Set a delay before playing a script</li>
+<li><strong>Serial Command</strong> - Enter commands to be sent to Serial port. Need to finish with "\r" to be executed</li>
+<li><strong>Stop All</strong> - This button will be the same on all PADs.  It stop sounds and action immediately.  A serial command can be send too</li>
 </ul>
+<div class="admonition hint">
+<p class="admonition-title">Sounds Tip</p>
+<ul>
+<li><strong>MIN/MAX</strong> - To play only one sound, set the same value for MIN and MAX </li>
+<li><strong>Delay</strong>  - Helpul to sync sound and motion</li>
+<li><strong>Random</strong> - If not selected, sound will play sequentially</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Maestro Tip</p>
+<ul>
+<li><strong>Script</strong> Script will always be played sequentially. For only one sricpt, set the same value for both </li>
+<li><strong>Delay</strong> Helpful to sync sound and motion</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li><strong>Button 1</strong> - Play Sound #1 on each button press, play script #1 on first button press and play script #2 on second button press<ul>
+<li>1st press = open door</li>
+<li>2nd press = close door</li>
+</ul>
+</li>
+<li><strong>Button 2</strong> - Play sounds 5 to 10 in a random order.  Sound will never be played 2 ime in a row</li>
+<li><strong>Button 3</strong> - Play "The Wave" sequence on Marcduino, at the same time play sound #2 with a slight delay to sync with motion</li>
+</ul>
+</div>
+<hr />
 <h4 id="button-controls">Button Controls<a class="headerlink" href="#button-controls" title="Permanent link">&para;</a></h4>
 <p><img align="center" alt="Button Overview" src="../../../assets/web_interface/web_buttons_overview.png" /></p>
 <p>The button control interface allows for:
