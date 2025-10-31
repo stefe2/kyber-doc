@@ -30,14 +30,14 @@ Start Kyber configuration with this page first
 
 ![General](../../assets/web_interface/web_general_features.png){ align=center }
 
-## Features
+### Features
 - **Serial Command** - Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. 
 - **Human Cyborg Relations (HCR)** - When enabled, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino"
 
 ---
 
 ![General](../../assets/web_interface/web_general_RC.png){ align=center }
-## RC Channels Settings
+### RC Channels Settings
 - **Button PAD** - Enter RC channel for the External Button PAD or Kyberpad.
 - **Toggle for PAD 2** - Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.
 - **Volume Control** - Enter RC channel to control volume.  This will be set on a slider or POT on the remote.
@@ -47,13 +47,13 @@ Start Kyber configuration with this page first
 ---
 
 ![General](../../assets/web_interface/web_general_maestro.png){ align=center }
-## Maestro
+### Maestro
 - **Quantity** - Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed
 
 ---
 
 ![General](../../assets/web_interface/web_general_maestro2.png){ align=center }
-## Maestro menu
+### Maestro menu
 - **Startup Script** - A script Will play on selected Maestro after Kyber boot.
 - **Delay** - Set a delay to postpone the script.
 - **Enable Script Check** - Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.
@@ -65,19 +65,17 @@ Start Kyber configuration with this page first
 ![Image2](../../assets/web_interface/web_general_sound2.png){ width="40%" align=right }
 </div>
 
-## Sound
+### Sound
 - **Volume Level** - Left picture: no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30
-
 - **Volume Level** - Right picture: RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position
-
 - **Start Sound** - Will be played after the Kyber boot sequence is finished.
 - **Delay** - Add a delay before playing Start Sound.
 - **Equalizer** - Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.
 
 ---
 
-![HCR Menu](../../assets/web_interface/web_HCR.png){ align=center width=70% }
-## Human Cyborg Relation (HCR)
+![HCR Menu](../../assets/web_interface/web_general_HCR.png){ align=center width=70% }
+### Human Cyborg Relation (HCR)
 - **RC Channel** - Used to control HCR volume.  You can use the same channel for all 3.
 - **Offset** - Used to adjust the sound level offset between each HCR channels.
 - **Startup Scrip** - Used to send a command to HCR when the Kyber boot.
@@ -111,21 +109,21 @@ The RC Settings Page is where you do most of the configuration for the RC channe
      ![RC Settings](../../assets/web_interface/web_RC_green24.png){ align=center }
 ---
 ![RC Settings](../../assets/web_interface/web_RC_PAD23.png){ align=center width=75% }
-## Button PAD Configuration
+### Button PAD Configuration
 - **Button PAD Mode** - Select 3 pads for a 3 positions toggle switch and 2 pads for a 2 positions
 - **Toggle Channel** - Display RC channel set under General web page
 - **Current SBUS Value** - Display SBUS value of the switch position coming from RC channel
 - **Pad 1-2-3 SBUS Value** - Toggle the switch and write the current SBUS value for each toggle positions
 ---
 ![RC Settings](../../assets/web_interface/web_RC_Buttons.png){ align=center width=60% }
-## Button Values Configuration
+### Button Values Configuration
 - This is where you will register each buttons PWM value for your configuration (Kyberpad or physical buttons)
 - **Ch x SBUS Values** - Display the PWM value of RC channel x set under General tab.  Value displayed without pressing any buttons will be the released state
 - **Button x PWM Value** - Register each buttons value in this field
 - **Released PWM Value** - Register the released state value in this field
 ---
 ![RC Settings](../../assets/web_interface/web_RC_Passthrough.png){ align=center width=100% }
-## RC Channels Pass Through
+### RC Channels Pass Through
 - Passthrough are used to map a RC channel to a Maestro servo output.  This give direct control on multiple servos
 - **Description** - Enter a descrition or a name for the passthrough
 - **RC Channel** - Set the RC channel you want to use. First you need to do a mix in the remote and assign it to a channel.
@@ -151,10 +149,10 @@ The RC Settings Page is where you do most of the configuration for the RC channe
 The Button Configuration Page is where all the buttons will be given a funtion.  It's the main feature of the Kyber Controller.
 
 ![Button Configuration](../../assets/web_interface/web_buttons_overview.png){ align=center width=100% }
-
+### Button Configuration
 - **PAD 1-2-3** - Depending on your configuration, PAD 1, 2 and 3 will be displayed.  Chose one to edit the buttons for this PAD
 - **Name** - Enter a descrition for the Button
-- **Sound MIN** - Set MIN sound to play.
+- **Sound MIN** - Set MIN sound to play
 - **Sound MAX** - Set MAX sound to play
 - **Sound Delay** - Set a Delay before playing a sound.
 - **Sound Random** - Sounds will be played randomly if a range is set between MIN and MAX
@@ -170,10 +168,10 @@ The Button Configuration Page is where all the buttons will be given a funtion. 
      - **Random** - If not selected, sound will play sequentially
 
 !!! hint "Maestro Tip"
-     - **Script** Script will always be played sequentially. For only one sricpt, set the same value for both 
-     - **Delay** Helpful to sync sound and motion
+     - **Script** will always play sequentially. Set the same value for both to always play the same script 
+     - **Delay** Help sync sound and motion
 
-!!! example "Example"
+!!! example "Exemple"
      - **Button 1** - Play Sound #1 on each button press, play script #1 on first button press and play script #2 on second button press
          - 1st press = open door
          - 2nd press = close door
@@ -182,46 +180,116 @@ The Button Configuration Page is where all the buttons will be given a funtion. 
 
 ---
 
+## Random Events
 
-#### Button Controls
-![Button Overview](../../assets/web_interface/web_buttons_overview.png){ align=center }
+The Random Events Page is where you set sounds and scripts to be played at a random time
 
-The button control interface allows for:
-- Quick preset positions
-- Customizable button actions
-- Instant command execution
-- Sequence triggering
+![Random Control](../../assets/web_interface/web_random_main.png){ align=center }
 
-#### Random Movement
-![Random Control](../../assets/web_interface/web_random.png){ align=center }
+---
 
-The random movement feature enables:
-- Automated position changes
-- Customizable movement ranges
-- Timing control
-- Pattern generation
+![Random Control](../../assets/web_interface/web_random_switch.png){ align=center width=75% }
+### Random Events Switch Configuration
+- **Random Channel** - Display the RC channel set for Random Events under General page
+- **Current SBUS Value** - Display the SBUS value for the switch position
+- **UP** - Toggle switch to UP position and write displayed value
+- **Center** - Toggle switch to Center position and write displayed value
+- **Down** - Toggle switch to Down position and whrite displayed value
 
-### Configuration
+![Random Control](../../assets/web_interface/web_random_up.png){ align=center width=100% }
+### Random Events UP Position
+- **Run Once** - Run Once event, will be played only once when the toggle switch will reach the desired position
+- **Description** - Enter a descrition for the Event
+- **Time MIN** - Set MIN time before triggering next event (in Seconds)
+- **Time MAX** - Set MAX time before triggering next event (in Seconds)
+- **Sound MIN** - Set MIN sound number to play
+- **Sound MAX** - Set MAX sound number to play
+- **Maestro MIN** - Set MIN script number to play
+- **Maestro MAX** - Set MAX script number to play
+- **Serial Command** - Enter commands to be sent to Serial port. Need to finish with "\r" to be executed
 
-#### General Settings
-![General Settings](../../assets/web_interface/web_general.png){ align=center }
+### Random Events CENTER Position
+- Refer to UP Position for configuration
 
-The general settings panel allows you to configure:
-- System preferences
-- Default values
-- Operation modes
-- Interface options
+### Random Events DOWN Position
+- Refer to UP Position for Configuration
 
-#### WiFi Configuration
+!!! hint "Tip"
+     - To randomly trigger an event, a sound or a Maestro script, set a different value for **MIN** and **MAX**
+
+!!! example "Exemple"
+     - **Script 1** - Randomly between 15 and 30 seconds, play a random sound between 10 and 15 and play a random script between 3 and 6 on Maestro #1 
+     - **Script 2** - Randomly between 60 and 120 seconds, Play sounds #20
+     - **Script 3** - Every 5 seconds, play sound #1
+
+---
+
+## RC Buttons
+
+---
+
+
+
+
+
+
+
+## WiFi Configuration
 ![WiFi Settings](../../assets/web_interface/web_wifi.png){ align=center }
 
-The WiFi configuration panel provides:
-- Network setup
-- Connection management
-- Security settings
-- Signal strength monitoring
+- **AP MODE** - Select to connect directly to the Kyber WiFi
+     - **SSID** - Default SSID is automatically set to KYBER_xxxx, where xxxx is the 4 last digit of the MAC address
+     - **Password** - Default password is 12345678
+- **STATION MODE** - Select to connect the Kyber to your home network
+     - **SSID** - Enter your home network SSID
+     - **Password** - Enter your home network password
+---
+## Accessing the Interface
 
-#### Firmware Management
+### AP Mode
+1. Connect your phone, tablet or computer WIFI to KYBER_xxxx
+2. Open a supported web browser
+3. Navigate to `http://192.168.4.1` (default address)
+4. The interface will load automatically (no login required)
+
+### Station Mode
+1. Connect the Kyber to your home network
+2. To find the IP address:
+     - Connect a USB cable
+     - Open a serial console @ 115200 bps
+     - Press reset button
+     - IP address will be displayed
+3. Open a supported web browser
+4. Navigate to `http://xxx.xxx.xxx.xxx` (router DHCP address)
+5. The interface will load automatically (no login required)
+
+!!! question "Away from home"
+     - If the Kyber can't see your home network it will automatically revert to **AP MODE**
+
+!!! question "Can't find SSID or network"
+     - Check if the physical switch / jumper is wired to enable WiFi
+
+!!! warning "Warning"
+    - Change default password as soon as you log into the Kyber for the first time
+    - Change default SSID if needed 
+    - Always disable WiFi when not in use. Refer to wiring section for more info on the WiFi switch
+
+!!! failure "Lost Password"
+    - Pushing reset button 2 time between 5-6 seconds will reset SSID to KYBER_xxxx and password to 12345678
+
+---
+
+!!! tip "Mobile Usage"
+    When using a mobile device:
+    
+    - Use landscape orientation for better control
+    - Enable screen rotation lock for stability
+    - Use two-finger gestures for precise adjustments
+    - Consider using a tablet for complex operations
+
+---
+
+## Firmware Management
 ![Firmware Updates](../../assets/web_interface/web_firmware.png){ align=center }
 
 The firmware section enables:
@@ -232,57 +300,15 @@ The firmware section enables:
 
 ## Mobile Interface
 
-The interface automatically adapts to mobile devices:
-
-1. **Touch-Optimized Controls**
-   - Large touch targets
-   - Swipe gestures
-   - Pull-to-refresh
-   - Touch-friendly sliders
-
-2. **Mobile Layout**
-   - Compact navigation
-   - Collapsible panels
-   - Quick action buttons
-   - Optimized performance
-
-!!! tip "Mobile Usage"
-    When using a mobile device:
-    
-    - Use landscape orientation for better control
-    - Enable screen rotation lock for stability
-    - Use two-finger gestures for precise adjustments
-    - Consider using a tablet for complex operations
-
-## Keyboard Shortcuts
-
-| Key Combination | Action |
-|----------------|--------|
-| Space | Emergency Stop |
-| Arrow Up/Down | Fine Position Adjust |
-| 1-9 | Select Channel |
-| Ctrl + S | Save Settings |
-| Ctrl + P | Play Sequence |
-
 ## Questions for Clarification
 
 !!! question "For Project Owner"
     1. What is the default web interface port?
     2. Are there different user access levels?
-    3. What browsers are officially supported?
-    4. Should we include custom UI customization instructions?
-    5. Are there mobile apps available?
 
 ## Accessing the Interface
 
 ### Local Access
-
-1. Open a supported web browser
-2. Navigate to `http://localhost:8080` (default address)
-3. The interface will load automatically (no login required)
-
-!!! info "Default Port"
-    The default port is 8080. If you need to change this, you can modify it in the system settings.
 
 ### Remote Access
 
