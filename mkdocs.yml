@@ -10,8 +10,6 @@ theme:
   logo: assets/kyber_logo.jpg
   favicon: assets/kyber_logo.jpg
   custom_dir: docs
-  extra_css:
-    - assets/stylesheets/extra.css
   features:
     - navigation.instant
     - navigation.tabs
@@ -52,6 +50,7 @@ nav:
           - Installation: manual/software/installation.md
           - Configuration: manual/software/configuration.md
           - Web Interface: manual/software/web-interface.md
+          - Kyberpad: manual/software/kyberpad.md
       - Troubleshooting: manual/troubleshooting.md
       - Usage Guide:
           - Basic Controls: manual/usage/basic-controls.md
@@ -74,6 +73,12 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.snippets
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/simple-lightbox.js
 
 plugins:
   - search

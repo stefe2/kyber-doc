@@ -18,6 +18,18 @@ The web interface is officially supported on:
 
 !!! tip "Browser Recommendation"
     For the best experience, we recommend using Google Chrome as it provides optimal performance and compatibility.
+
+!!! hint "Mobile Usage"
+    When using a mobile device:
+    
+    - Use landscape orientation for better control
+    - Enable screen rotation lock for stability
+    - Use two-finger gestures for precise adjustments
+    - Consider using a tablet for complex operations
+
+!!! warning "Save to Memory"
+    Do not forget to click save to memory button after editing settings. Otherwise, change will be lost if you navigate to another page
+
 ---
 ## General Page
 
@@ -87,10 +99,6 @@ Start Kyber configuration with this page first
 ## Registration
 - Add the name of your droid or your own name.  This will be displayed on the web interface footer
 
----
-
-!!! warning "Save to Memory"
-    Do not forget to save to memory when you edit settings. Change will be lost if you click on top menu.
 ---
 
 ## RC Settings Page
@@ -276,16 +284,6 @@ The Random Events Page is where you set sounds and scripts to be played at a ran
 
 !!! failure "Lost Password"
     - Pushing reset button 2 time between 5-6 seconds will reset SSID to KYBER_xxxx and password to 12345678
-
----
-
-!!! tip "Mobile Usage"
-    When using a mobile device:
-    
-    - Use landscape orientation for better control
-    - Enable screen rotation lock for stability
-    - Use two-finger gestures for precise adjustments
-    - Consider using a tablet for complex operations
 
 ---
 
