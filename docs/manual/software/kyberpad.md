@@ -47,7 +47,7 @@ If your firmware is outdated:
 
 ## Kyberpad Installation
 
-### Installing the Script
+### Installing the LUA widget
 1. Download and extract the Kyberpad zip file
 2. On your radio's SD card:
     - Create a new folder named "Scripts"
