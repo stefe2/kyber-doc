@@ -1,0 +1,1734 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Example Hosted with MkDocs + Material on GitHub Pages">
+      
+      
+      
+        <link rel="canonical" href="https://stefe2.github.io/kyber-doc/manual/software/web-inferface-backup/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/kyber_logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Web Interface - Kyber Controller Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Kyber Controller Documentation" class="md-header__button md-logo" aria-label="Kyber Controller Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/kyber_logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kyber Controller Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stefe2/kyber-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    stefe2/kyber-doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../overview/" class="md-tabs__link">
+          
+  
+  
+  Manual
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kyber Controller Documentation" class="md-nav__button md-logo" aria-label="Kyber Controller Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/kyber_logo.jpg" alt="logo">
+
+    </a>
+    Kyber Controller Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stefe2/kyber-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    stefe2/kyber-doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Manual
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/main-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Main Board Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/maestro-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maestro Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/servo-compatibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Servo Compatibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/wiring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wiring Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kyberpad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kyberpad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Usage Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Usage Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/basic-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Controls
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/advanced-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/sound-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sound Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser Compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-channels-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC Channels Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maestro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maestro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maestro-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maestro menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-cyborg-relation-hcr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Cyborg Relation (HCR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rc-settings-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC Settings Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RC Settings Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button-pad-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button PAD Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button-values-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Values Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-channels-pass-through" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC Channels Pass Through
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-configuration-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Configuration Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Button Configuration Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-events-switch-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Events Switch Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-events-up-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Events UP Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-events-center-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Events CENTER Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-events-down-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Events DOWN Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rc-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC Buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wifi-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ap-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      AP Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#station-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Station Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-for-clarification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions for Clarification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-interface_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="web-interface">Web Interface<a class="headerlink" href="#web-interface" title="Permanent link">&para;</a></h1>
+<p>The Kyber Control System provides a powerful web-based interface for configuration. The interface is designed to be intuitive and responsive, allowing you to configure your system from any supported web browser.</p>
+<p><img alt="Web Interface Home" src="../../../assets/web_interface/web_home.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Interface Overview</p>
+<p>Top menu provides quick access to all major functions of the system.<br />
+The web interface will adjust dynamically to your configuration.</p>
+</div>
+<h2 id="browser-compatibility">Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Permanent link">&para;</a></h2>
+<p>The web interface is officially supported on:</p>
+<ul>
+<li>Google Chrome (Recommended)</li>
+<li>Internet Explorer</li>
+<li>Safari</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Browser Recommendation</p>
+<p>For the best experience, we recommend using Google Chrome as it provides optimal performance and compatibility.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Mobile Usage</p>
+<p>When using a mobile device:</p>
+<ul>
+<li>Use landscape orientation for better control</li>
+<li>Enable screen rotation lock for stability</li>
+<li>Use two-finger gestures for precise adjustments</li>
+<li>Consider using a tablet for complex operations</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Save to Memory</p>
+<p>Do not forget to click save to memory button after editing settings. Otherwise, change will be lost if you navigate to another page</p>
+</div>
+<hr />
+<h2 id="general-page">General Page<a class="headerlink" href="#general-page" title="Permanent link">&para;</a></h2>
+<p>The General Page is where you do basic configuration of the Kyber Controller.<br />
+Start Kyber configuration with this page first</p>
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general.png" /></p>
+<hr />
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general_features.png" /></p>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Serial Command</strong> - Enables sending commands via the serial port "Marcduino on the Kyber Board" to any devices that support this type of connexion. </li>
+<li><strong>Human Cyborg Relations (HCR)</strong> - When enabled, this will add HCR configuration menu in General page.  Connexion to the HCR will be with the same Serial port "Marcduino"</li>
+</ul>
+<hr />
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general_RC.png" /></p>
+<h3 id="rc-channels-settings">RC Channels Settings<a class="headerlink" href="#rc-channels-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Button PAD</strong> - Enter RC channel for the External Button PAD or Kyberpad.</li>
+<li><strong>Toggle for PAD 2</strong> - Enter RC channel to switch between Button PAD 1 and PAD 2.  This will be set on a 2 position toggle switch.</li>
+<li><strong>Volume Control</strong> - Enter RC channel to control volume.  This will be set on a slider or POT on the remote.</li>
+<li><strong>Buttons 1-2 3-4 5-6</strong> - Enter RC channel to act like a set of 2 buttons.  This wil be set on a 3 positions toggle switch for each channels. (See Buttons RC section)</li>
+<li><strong>Random On/Off</strong> - Enter RC channel to enable Random sounds and events.  This will be set on a 3 positions toggle switch. (See Random Section for more Info)</li>
+</ul>
+<hr />
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general_maestro.png" /></p>
+<h3 id="maestro">Maestro<a class="headerlink" href="#maestro" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Quantity</strong> - Enter how many Maestro you will be using. Kyber support up to 2 Maestro, from 6 to 24 channels. After saving, a new Maestro Menu will be displayed</li>
+</ul>
+<hr />
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general_maestro2.png" /></p>
+<h3 id="maestro-menu">Maestro menu<a class="headerlink" href="#maestro-menu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Startup Script</strong> - A script Will play on selected Maestro after Kyber boot.</li>
+<li><strong>Delay</strong> - Set a delay to postpone the script.</li>
+<li><strong>Enable Script Check</strong> - Check if a script is already running before starting a new one.  When enabled, if a script is already running, new script will not start.</li>
+</ul>
+<hr />
+<div class="grid">
+<p><img align="left" alt="Image1" src="../../../assets/web_interface/web_general_sound1.png" width="36%" />
+<img align="right" alt="Image2" src="../../../assets/web_interface/web_general_sound2.png" width="40%" /></p>
+</div>
+<h3 id="sound">Sound<a class="headerlink" href="#sound" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Volume Level</strong> - Left picture: no RC channel is set for Volume Control, you can manually set the volume level from 0 to 30</li>
+<li><strong>Volume Level</strong> - Right picture: RC channel set for volume control.  Sound level will be displayed depending on the slider/pot position</li>
+<li><strong>Start Sound</strong> - Will be played after the Kyber boot sequence is finished.</li>
+<li><strong>Delay</strong> - Add a delay before playing Start Sound.</li>
+<li><strong>Equalizer</strong> - Set the Equalizer to your liking.  This is a feature built in the DFPlayer and cannot be adjusted manually.</li>
+</ul>
+<hr />
+<p><img align="center" alt="HCR Menu" src="../../../assets/web_interface/web_general_HCR.png" width="70%" /></p>
+<h3 id="human-cyborg-relation-hcr">Human Cyborg Relation (HCR)<a class="headerlink" href="#human-cyborg-relation-hcr" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RC Channel</strong> - Used to control HCR volume.  You can use the same channel for all 3.</li>
+<li><strong>Offset</strong> - Used to adjust the sound level offset between each HCR channels.</li>
+<li><strong>Startup Scrip</strong> - Used to send a command to HCR when the Kyber boot.</li>
+<li><strong>Delay</strong> - Used to postpone startup script.</li>
+</ul>
+<hr />
+<p><img align="center" alt="General" src="../../../assets/web_interface/web_general_registration.png" width="50%" /></p>
+<h2 id="registration">Registration<a class="headerlink" href="#registration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add the name of your droid or your own name.  This will be displayed on the web interface footer</li>
+</ul>
+<hr />
+<h2 id="rc-settings-page">RC Settings Page<a class="headerlink" href="#rc-settings-page" title="Permanent link">&para;</a></h2>
+<p>The RC Settings Page is where you do most of the configuration for the RC channels.  This page will adapt depending of the configuration you made in General Page</p>
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC.png" /></p>
+<div class="admonition failure">
+<p class="admonition-title">Fail</p>
+<ul>
+<li>No sBus connexion from the receiver to the Kyber, check wiring and receiver configuration
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_red.png" /></li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<ul>
+<li>Good sBus connexion from the receiver to the Kyber, support sbus16 and sbus24
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_green16.png" />
+ <img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_green24.png" /></li>
+</ul>
+</div>
+<hr />
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_PAD23.png" width="75%" /></p>
+<h3 id="button-pad-configuration">Button PAD Configuration<a class="headerlink" href="#button-pad-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Button PAD Mode</strong> - Select 3 pads for a 3 positions toggle switch and 2 pads for a 2 positions</li>
+<li><strong>Toggle Channel</strong> - Display RC channel set under General web page</li>
+<li><strong>Current SBUS Value</strong> - Display SBUS value of the switch position coming from RC channel</li>
+<li><strong>Pad 1-2-3 SBUS Value</strong> - Toggle the switch and write the current SBUS value for each toggle positions</li>
+</ul>
+<hr />
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_Buttons.png" width="60%" /></p>
+<h3 id="button-values-configuration">Button Values Configuration<a class="headerlink" href="#button-values-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This is where you will register each buttons PWM value for your configuration (Kyberpad or physical buttons)</li>
+<li><strong>Ch x SBUS Values</strong> - Display the PWM value of RC channel x set under General tab.  Value displayed without pressing any buttons will be the released state</li>
+<li><strong>Button x PWM Value</strong> - Register each buttons value in this field</li>
+<li><strong>Released PWM Value</strong> - Register the released state value in this field</li>
+</ul>
+<hr />
+<p><img align="center" alt="RC Settings" src="../../../assets/web_interface/web_RC_Passthrough.png" width="100%" /></p>
+<h3 id="rc-channels-pass-through">RC Channels Pass Through<a class="headerlink" href="#rc-channels-pass-through" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Passthrough are used to map a RC channel to a Maestro servo output.  This give direct control on multiple servos</li>
+<li><strong>Description</strong> - Enter a descrition or a name for the passthrough</li>
+<li><strong>RC Channel</strong> - Set the RC channel you want to use. First you need to do a mix in the remote and assign it to a channel.</li>
+<li><strong>Maestro ID</strong> - Set the ID of the Maestro you want to control. (1 or 2)</li>
+<li><strong>Maestro Channel</strong> - Set the channel of the Maestro you want to control (0 to 23)</li>
+<li><strong>Maestro PWM Min/Max</strong> - Set min and max PWM for this channel.</li>
+<li><strong>Maestro Disable Deadband</strong> - Select for direct control on the servo without a deadband.</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Same RC channel can be used multiple time</li>
+<li>PWM MIN and MAX can be inverted to change servo direction</li>
+<li>If you set servo limit in Maestro Control Center, use the same values for MIN and MAX</li>
+<li>Disabling Deadband will prevent the servo to move freely if used in a script (Maestro limitation)</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Servo #1 is connected to Maestro #1 port 5 and controlled by RC channel #1</li>
+<li>Servo #2 is connected to Maestro #2 port 6 and controlled by RC channel #2.<br />
+ Since Deadband is disabled, the servo cannot be controlled by a script</li>
+</ul>
+</div>
+<hr />
+<h2 id="button-configuration-page">Button Configuration Page<a class="headerlink" href="#button-configuration-page" title="Permanent link">&para;</a></h2>
+<p>The Button Configuration Page is where all the buttons will be given a funtion.  It's the main feature of the Kyber Controller.</p>
+<p><img align="center" alt="Button Configuration" src="../../../assets/web_interface/web_buttons_overview.png" width="100%" /></p>
+<h3 id="button-configuration">Button Configuration<a class="headerlink" href="#button-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PAD 1-2-3</strong> - Depending on your configuration, PAD 1, 2 and 3 will be displayed.  Chose one to edit the buttons for this PAD</li>
+<li><strong>Name</strong> - Enter a descrition for the Button</li>
+<li><strong>Sound MIN</strong> - Set MIN sound to play</li>
+<li><strong>Sound MAX</strong> - Set MAX sound to play</li>
+<li><strong>Sound Delay</strong> - Set a Delay before playing a sound.</li>
+<li><strong>Sound Random</strong> - Sounds will be played randomly if a range is set between MIN and MAX</li>
+<li><strong>Maestro Script</strong> - Set script number to play</li>
+<li><strong>Maestro Script2</strong> - Set second script number to play</li>
+<li><strong>Maestro Script Delay</strong> - Set a delay before playing a script</li>
+<li><strong>Serial Command</strong> - Enter commands to be sent to Serial port. Need to finish with "\r" to be executed</li>
+<li><strong>Stop All</strong> - This button will be the same on all PADs.  It stop sounds and action immediately.  A serial command can be send too</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Sounds Tip</p>
+<ul>
+<li><strong>MIN/MAX</strong> - To play only one sound, set the same value for MIN and MAX </li>
+<li><strong>Delay</strong>  - Helpul to sync sound and motion</li>
+<li><strong>Random</strong> - If not selected, sound will play sequentially</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Maestro Tip</p>
+<ul>
+<li><strong>Script</strong> will always play sequentially. Set the same value for both to always play the same script </li>
+<li><strong>Delay</strong> Help sync sound and motion</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<ul>
+<li><strong>Button 1</strong> - Play Sound #1 on each button press, play script #1 on first button press and play script #2 on second button press<ul>
+<li>1st press = open door</li>
+<li>2nd press = close door</li>
+</ul>
+</li>
+<li><strong>Button 2</strong> - Play sounds 5 to 10 in a random order.  Sound will never be played 2 ime in a row</li>
+<li><strong>Button 3</strong> - Play "The Wave" sequence on Marcduino, at the same time play sound #2 with a slight delay to sync with motion</li>
+</ul>
+</div>
+<hr />
+<h2 id="random-events">Random Events<a class="headerlink" href="#random-events" title="Permanent link">&para;</a></h2>
+<p>The Random Events Page is where you set sounds and scripts to be played at a random time</p>
+<p><img align="center" alt="Random Control" src="../../../assets/web_interface/web_random_main.png" /></p>
+<hr />
+<p><img align="center" alt="Random Control" src="../../../assets/web_interface/web_random_switch.png" width="75%" /></p>
+<h3 id="random-events-switch-configuration">Random Events Switch Configuration<a class="headerlink" href="#random-events-switch-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Random Channel</strong> - Display the RC channel set for Random Events under General page</li>
+<li><strong>Current SBUS Value</strong> - Display the SBUS value for the switch position</li>
+<li><strong>UP</strong> - Toggle switch to UP position and write displayed value</li>
+<li><strong>Center</strong> - Toggle switch to Center position and write displayed value</li>
+<li><strong>Down</strong> - Toggle switch to Down position and whrite displayed value</li>
+</ul>
+<p><img align="center" alt="Random Control" src="../../../assets/web_interface/web_random_up.png" width="100%" /></p>
+<h3 id="random-events-up-position">Random Events UP Position<a class="headerlink" href="#random-events-up-position" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Run Once</strong> - Run Once event, will be played only once when the toggle switch will reach the desired position</li>
+<li><strong>Description</strong> - Enter a descrition for the Event</li>
+<li><strong>Time MIN</strong> - Set MIN time before triggering next event (in Seconds)</li>
+<li><strong>Time MAX</strong> - Set MAX time before triggering next event (in Seconds)</li>
+<li><strong>Sound MIN</strong> - Set MIN sound number to play</li>
+<li><strong>Sound MAX</strong> - Set MAX sound number to play</li>
+<li><strong>Maestro MIN</strong> - Set MIN script number to play</li>
+<li><strong>Maestro MAX</strong> - Set MAX script number to play</li>
+<li><strong>Serial Command</strong> - Enter commands to be sent to Serial port. Need to finish with "\r" to be executed</li>
+</ul>
+<h3 id="random-events-center-position">Random Events CENTER Position<a class="headerlink" href="#random-events-center-position" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Refer to UP Position for configuration</li>
+</ul>
+<h3 id="random-events-down-position">Random Events DOWN Position<a class="headerlink" href="#random-events-down-position" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Refer to UP Position for Configuration</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>To randomly trigger an event, a sound or a Maestro script, set a different value for <strong>MIN</strong> and <strong>MAX</strong></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<ul>
+<li><strong>Script 1</strong> - Randomly between 15 and 30 seconds, play a random sound between 10 and 15 and play a random script between 3 and 6 on Maestro #1 </li>
+<li><strong>Script 2</strong> - Randomly between 60 and 120 seconds, Play sounds #20</li>
+<li><strong>Script 3</strong> - Every 5 seconds, play sound #1</li>
+</ul>
+</div>
+<hr />
+<h2 id="rc-buttons">RC Buttons<a class="headerlink" href="#rc-buttons" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="wifi-configuration">WiFi Configuration<a class="headerlink" href="#wifi-configuration" title="Permanent link">&para;</a></h2>
+<p><img align="center" alt="WiFi Settings" src="../../../assets/web_interface/web_wifi.png" /></p>
+<ul>
+<li><strong>AP MODE</strong> - Select to connect directly to the Kyber WiFi<ul>
+<li><strong>SSID</strong> - Default SSID is automatically set to KYBER_xxxx, where xxxx is the 4 last digit of the MAC address</li>
+<li><strong>Password</strong> - Default password is 12345678</li>
+</ul>
+</li>
+<li><strong>STATION MODE</strong> - Select to connect the Kyber to your home network<ul>
+<li><strong>SSID</strong> - Enter your home network SSID</li>
+<li><strong>Password</strong> - Enter your home network password</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="accessing-the-interface">Accessing the Interface<a class="headerlink" href="#accessing-the-interface" title="Permanent link">&para;</a></h2>
+<h3 id="ap-mode">AP Mode<a class="headerlink" href="#ap-mode" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Connect your phone, tablet or computer WIFI to KYBER_xxxx</li>
+<li>Open a supported web browser</li>
+<li>Navigate to <code>http://192.168.4.1</code> (default address)</li>
+<li>The interface will load automatically (no login required)</li>
+</ol>
+<h3 id="station-mode">Station Mode<a class="headerlink" href="#station-mode" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Connect the Kyber to your home network</li>
+<li>To find the IP address:<ul>
+<li>Connect a USB cable</li>
+<li>Open a serial console @ 115200 bps</li>
+<li>Press reset button</li>
+<li>IP address will be displayed</li>
+</ul>
+</li>
+<li>Open a supported web browser</li>
+<li>Navigate to <code>http://xxx.xxx.xxx.xxx</code> (router DHCP address)</li>
+<li>The interface will load automatically (no login required)</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Away from home</p>
+<ul>
+<li>If the Kyber can't see your home network it will automatically revert to <strong>AP MODE</strong></li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Can't find SSID or network</p>
+<ul>
+<li>Check if the physical switch / jumper is wired to enable WiFi</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>Change default password as soon as you log into the Kyber for the first time</li>
+<li>Change default SSID if needed </li>
+<li>Always disable WiFi when not in use. Refer to wiring section for more info on the WiFi switch</li>
+</ul>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Lost Password</p>
+<ul>
+<li>Pushing reset button 2 time between 5-6 seconds will reset SSID to KYBER_xxxx and password to 12345678</li>
+</ul>
+</div>
+<hr />
+<h2 id="firmware-management">Firmware Management<a class="headerlink" href="#firmware-management" title="Permanent link">&para;</a></h2>
+<p><img align="center" alt="Firmware Updates" src="../../../assets/web_interface/web_firmware.png" /></p>
+<p>The firmware section enables:
+- System updates
+- Version management
+- Update history
+- System recovery options</p>
+<h2 id="mobile-interface">Mobile Interface<a class="headerlink" href="#mobile-interface" title="Permanent link">&para;</a></h2>
+<h2 id="questions-for-clarification">Questions for Clarification<a class="headerlink" href="#questions-for-clarification" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">For Project Owner</p>
+<ol>
+<li>What is the default web interface port?</li>
+<li>Are there different user access levels?</li>
+</ol>
+</div>
+<h2 id="accessing-the-interface_1">Accessing the Interface<a class="headerlink" href="#accessing-the-interface_1" title="Permanent link">&para;</a></h2>
+<h3 id="local-access">Local Access<a class="headerlink" href="#local-access" title="Permanent link">&para;</a></h3>
+<h3 id="remote-access">Remote Access<a class="headerlink" href="#remote-access" title="Permanent link">&para;</a></h3>
+<p>To access your Kyber Control System from outside your local network:</p>
+<ol>
+<li>Configure port forwarding on your router:</li>
+<li>Forward port 8080 (or your custom port) to your Kyber system</li>
+<li>
+<p>Use TCP protocol</p>
+</li>
+<li>
+<p>Access via external IP:</p>
+</li>
+<li>Find your external IP address</li>
+<li>Use <code>http://your-external-ip:8080</code></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Security Notice</p>
+<p>When enabling remote access:</p>
+<ul>
+<li>Use a firewall to restrict access</li>
+<li>Consider using a VPN for secure remote connections</li>
+<li>Regularly update your system firmware</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Custom Title</p>
+<p>This is a note admonition. The title is optional.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>Also known as "summary" or "tldr"</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Additional information</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Also known as "hint" or "important"</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Also known as "check" or "done"</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Also known as "help" or "faq"</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Also known as "caution" or "attention"</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Also known as "fail" or "missing"</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Also known as "error"</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Report a bug</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An example</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Also known as "cite"</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../assets/javascripts/simple-lightbox.js"></script>
+      
+    
+  </body>
+</html>
