@@ -47,8 +47,8 @@ The General page is your starting point for configuring the Kyber Controller. Be
 
 - **Serial Command**
     - Enables command transmission through the "Marcduino" serial port on the Kyber Board
-    - Compatible with any device supporting serial communication
-    - Used for precise device control and automation
+    - Compatible with any device supporting serial communication @ 9600 Bps (Default)
+    - Used for external device control and automation
 
 - **Human Cyborg Relations (HCR)**
     - Activates the HCR configuration menu in the General page
@@ -457,22 +457,22 @@ The Button Configuration page is the heart of the Kyber Controller, where you as
 
 ## Random Events System
 
-The Random Events system allows you to create automated, randomized behaviors for your Kyber Controller.
+The Random Events system allows you to create automated, randomized behaviors for your Droid.
 
 ![Random Events Overview](../../assets/web_interface/web_random_main.png){ align=center }
 
-### Switch Configuration
+### Toggle Switch Configuration
 ![Switch Setup](../../assets/web_interface/web_random_switch.png){ align=center width=75% }
 
 - **Current Value Display**
     - Shows live SBUS values
-    - Updates with switch movement
+    - Updates with toggle switch movement
     - Used for calibration
 
 - **Position Settings**
-    - UP: Configure upper switch position
-    - CENTER: Set middle switch position
-    - DOWN: Set lower switch position
+    - UP: Configure upper toggle switch position pwm value
+    - CENTER: Set middle toggle switch position pwm value
+    - DOWN: Set lower toggle switch position pwm value
 
 ### Event Configuration
 ![Event Setup](../../assets/web_interface/web_random_up.png){ align=center width=100% }
@@ -531,37 +531,48 @@ Each position (UP/CENTER/DOWN) shares these configuration options:
 
      - **Example 1: Random Ambient Behavior**
     
-    Configuration:
-    - Time: 15-30 seconds
-    - Sounds: 10-15 (random)
-    - Scripts: 3-6 (random)
-    Result: Regular, varied ambient activity
-    ```
+         Configuration:
 
-    **Example 2: Periodic Announcement**
-    ```
-    Configuration:
-    - Time: 60-120 seconds
-    - Sound: 20 (fixed)
-    Result: Scheduled announcements
-    ```
+         - Time: 15-30 seconds
+         - Sounds: 10-15 (random)
+         - Scripts: 3-6 (random)
+    
+         Result: 
+         
+         - Regular, varied ambient activity and sounds
 
-    **Example 3: Quick Response**
-    ```
-    Configuration:
-    - Time: 5 seconds (fixed)
-    - Sound: 1 (fixed)
-    Result: Regular, consistent response
-    ```
+     - **Example 2: Periodic Sound**
+    
+         Configuration:
+
+         - Time: 60-120 seconds
+         - Sound: 20 (fixed)
+
+         Result:
+
+         - Periodic Sound between 60 and 120 seconds
+
+     - **Example 3: Quick Sound**
+    
+         Configuration:
+
+         - Time: 5 seconds (fixed)
+         - Sound: 1 (fixed)
+
+         Result:
+         
+         - Same sound every 5 seconds
 
 !!! warning "Performance Note"
-    - Monitor system resources with frequent events
     - Test timing combinations thoroughly
     - Avoid overwhelming the system
 
 ---
 
 ## RC Buttons
+
+!!! info "To Do"
+    Add pictures and description
 
 ---
 
@@ -576,7 +587,6 @@ Each position (UP/CENTER/DOWN) shares these configuration options:
 Configure your Kyber's wireless connectivity for local or network access.
 
 ![WiFi Settings Panel](../../assets/web_interface/web_wifi.png){ align=center }
-*WiFi configuration interface*
 
 ### Connection Modes
 
@@ -601,7 +611,7 @@ Connect the Kyber to your existing WiFi network.
 #### AP Mode Setup
 1. **Device Connection**
     - Connect to `KYBER_xxxx` network
-    - Use default password
+    - Use default password `12345678`
     - Wait for connection
 
 2. **Interface Access**
@@ -616,13 +626,13 @@ Connect the Kyber to your existing WiFi network.
     - Wait for connection
 
 2. **Finding IP Address**
-    ```
+
     Method:
+
     1. Connect USB cable
     2. Open serial console (115200 bps)
     3. Press reset button
     4. Note displayed IP address
-    ```
 
 3. **Accessing Interface**
     - Open web browser
@@ -649,154 +659,55 @@ Connect the Kyber to your existing WiFi network.
 
 !!! tip "Troubleshooting Guide"
     1. **Network Not Found**
-        - Check WiFi switch/jumper
-        - Verify power to WiFi module
-        - Confirm correct SSID
+         - Check WiFi switch/jumper
+         - Verify power to WiFi module
+         - Confirm correct SSID
 
     2. **Connection Issues**
-        - Verify credentials
-        - Check signal strength
-        - Confirm router settings
+         - Verify credentials
+         - Check signal strength
+         - Confirm router settings
 
     3. **Password Reset**
-        ```
-        Recovery Process:
-        1. Press reset button twice
-        2. Hold 5-6 seconds each press
-        3. SSID resets to KYBER_xxxx
-        4. Password resets to 12345678
-        ```
+         - Press reset button twice
+         - Hold 5-6 seconds each press
+         - SSID resets to KYBER_xxxx
+         - Password resets to 12345678
+        
 
 !!! info "Network Selection Tips"
-    - Use 2.4GHz networks for better range
+    - Kyber only support 2.4GHz networks
     - Avoid crowded networks
-    - Consider dedicated network for reliable connection
+    - Place your RC remote and receiver away from the Kyber
 
 ---
 
-## System Management
-
-### Firmware Management
+## Firmware Management
 ![Firmware Management Interface](../../assets/web_interface/web_firmware.png){ align=center }
-*Firmware update and management interface*
 
-#### Core Features
-1. **System Updates**
-    - Check current version
-    - Download and install updates
-    - View update history
-    - Verify installation status
+#### Firmware Update
 
-2. **Version Control**
-    - Track firmware versions
-    - Review change logs
-    - Manage rollbacks
-    - Monitor system stability
+- Chose the latest Kyber bin file to update your system
+- Click Update Firmware
+- Once at 100% Kyber will reboot
+- Navigate to `http://192.168.4.1`
 
-3. **System Recovery**
-    - Backup current settings
-    - Restore previous versions
-    - Emergency recovery options
-    - Configuration management
+#### Check Online for Update
 
-### Remote Access Configuration
+- This will be enabled at a later time
 
-#### Local Network Access
-1. **Basic Setup**
-    - Connect to local network
-    - Use assigned IP address
-    - Default port configuration
-    - Local security settings
+#### System Recovery
 
-2. **Network Integration**
-    - DHCP configuration
-    - Static IP assignment
-    - Network discovery
-    - Local DNS settings
+- Right click on config.json and save file to your PC
+- Chose a previously saved config.json file to reload configuration
+- Click Update to enable new config
+- Clear Config will reset the Kyber to factory default
 
-#### Remote Access Setup
+#### System Control
 
-!!! warning "Security Configuration"
-    Before enabling remote access, implement these security measures:
+- Click Reboot System to reboot the Kyber
 
-    1. **Network Security**
-        - Configure firewall rules
-        - Set up VPN access
-        - Enable encryption
-        - Update passwords
-
-    2. **Port Forwarding**
-        ```
-        Configuration:
-        - Forward port 8080 (or custom)
-        - Protocol: TCP
-        - Internal IP: Kyber's IP
-        - External IP: Router's public IP
-        ```
-
-    3. **Access Method**
-        ```
-        Connection String:
-        http://your-external-ip:8080
-        ```
-
-### Mobile Interface
-
-#### Optimization for Mobile Devices
-1. **Interface Adaptation**
-    - Responsive design
-    - Touch-friendly controls
-    - Simplified navigation
-    - Optimized layouts
-
-2. **Mobile Features**
-    - Quick access buttons
-    - Gesture controls
-    - Status indicators
-    - Performance optimization
-
-#### Mobile-Specific Tips
-!!! tip "Mobile Usage Guidelines"
-    1. **Interface Navigation**
-        - Use landscape orientation
-        - Enable touch gestures
-        - Utilize quick actions
-        - Access essential controls
-
-    2. **Performance**
-        - Clear browser cache
-        - Use recommended browser
-        - Monitor data usage
-        - Optimize connection
-
-    3. **Troubleshooting**
-        - Check network stability
-        - Verify browser compatibility
-        - Clear application data
-        - Update system software
-
-### System Security
-
-!!! danger "Critical Security Measures"
-    1. **Access Control**
-        - Use strong passwords
-        - Enable authentication
-        - Implement role-based access
-        - Regular security audits
-
-    2. **Network Protection**
-        - Configure firewalls
-        - Use secure protocols
-        - Monitor access logs
-        - Update security settings
-
-    3. **Maintenance**
-        - Regular updates
-        - Security patches
-        - System backups
-        - Performance monitoring
-
-!!! info "Support Resources"
+!!! info "Support Resources To Do"
     - Documentation updates
     - Community forums
     - Technical support
