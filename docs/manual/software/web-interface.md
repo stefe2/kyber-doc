@@ -254,7 +254,7 @@ The RC Settings page is the central hub for configuring your radio control chann
 ![Button Value Setup](../../assets/web_interface/web_RC_Buttons.png){ align=center width=60% }
 
 - **Channel Values**
-    - Display selected RC hannel
+    - Display selected RC channel
     - Monitor SBUS values for each channel
     - Values shown in real-time
 
@@ -575,12 +575,6 @@ Each position (UP/CENTER/DOWN) shares these configuration options:
     Add pictures and description
 
 ---
-
-
-
-
-
-
 
 ## WiFi Configuration
 
