@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kyberpad" class="md-skip">
+        <a href="#kyberpad-v10" class="md-skip">
           Skip to content
         </a>
       
@@ -760,6 +760,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -869,9 +878,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-configure-mix-controls" class="md-nav__link">
+  <a href="#5-configure-buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Configure Mix Controls
+      5. Configure Buttons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Other
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configure-mix-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Configure Mix Controls
     </span>
   </a>
   
@@ -1136,6 +1163,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1245,9 +1281,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-configure-mix-controls" class="md-nav__link">
+  <a href="#5-configure-buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Configure Mix Controls
+      5. Configure Buttons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Other
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configure-mix-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Configure Mix Controls
     </span>
   </a>
   
@@ -1277,12 +1331,13 @@
   
 
 
-<h1 id="kyberpad">Kyberpad<a class="headerlink" href="#kyberpad" title="Permanent link">&para;</a></h1>
+<h1 id="kyberpad-v10">Kyberpad V1.0<a class="headerlink" href="#kyberpad-v10" title="Permanent link">&para;</a></h1>
 <h2 id="kyberpad-overview">Kyberpad Overview<a class="headerlink" href="#kyberpad-overview" title="Permanent link">&para;</a></h2>
-<p>The Kyberpad LUA script is software made for FrSky remotes using the ETHOS operating system. It removes the need to modify the remote to add physical button PADs.</p>
+<p>The Kyberpad is designed to work with the Kyber Control System. It replace the physical 15 buttons board and remove the need to modify your remote.</p>
+<p>It's a LUA script you install on your Tandem family remote that display the 15 buttons pad on screen and let you setup the name and color for each buttons. </p>
+<p>It interact with the Kyber controller via the remote touch screen. It support a toggle switch to enable a second screen that give you access to another 15 buttons.</p>
 <h3 id="main-interface">Main Interface<a class="headerlink" href="#main-interface" title="Permanent link">&para;</a></h3>
-<p><img alt="Kyberpad Main Interface" src="../../../assets/kyberpad/kyberpad_main.png" />
-<em>The main Kyberpad interface showing the button layout and status display</em></p>
+<p><img alt="Kyberpad Main Interface" src="../../../assets/kyberpad/kyberpad_main.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Interface Features</p>
 <ul>
@@ -1303,14 +1358,22 @@
 </ul>
 </div>
 <hr />
-<h2 id="radio-and-receiver-update">Radio and Receiver Update<a class="headerlink" href="#radio-and-receiver-update" title="Permanent link">&para;</a></h2>
-<h3 id="1-check-firmware-version">1. Check Firmware Version<a class="headerlink" href="#1-check-firmware-version" title="Permanent link">&para;</a></h3>
+<h3 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>FrSky X18, X18S, X20, X20S, X20HD, XE and Twin X remote are supported.</li>
+<li>Your remote need to be at the latest firmware version. </li>
+<li>Kyber Controller board is required. You can buy one directly from Matt Hobbs.<ul>
+<li>https://www.facebook.com/groups/1341505756182087</li>
+</ul>
+</li>
+</ul>
 <div class="admonition note">
-<p class="admonition-title">Current Version</p>
+<p class="admonition-title">ETHOS Version Support</p>
 <p>Latest firmware version: 1.6.3 (as of 11/25)</p>
 </div>
-<p><img alt="Firmware Version Check" src="../../../assets/kyberpad/remote_firmware_check.png" />
-<em>Location of the firmware version in your radio's settings</em></p>
+<h2 id="radio-and-receiver-update">Radio and Receiver Update<a class="headerlink" href="#radio-and-receiver-update" title="Permanent link">&para;</a></h2>
+<h3 id="1-check-firmware-version">1. Check Firmware Version<a class="headerlink" href="#1-check-firmware-version" title="Permanent link">&para;</a></h3>
+<p><img alt="Firmware Version Check" src="../../../assets/kyberpad/remote_firmware_check.png" /></p>
 <h3 id="2-update-system">2. Update System<a class="headerlink" href="#2-update-system" title="Permanent link">&para;</a></h3>
 <p>If your firmware is outdated:</p>
 <ol>
@@ -1323,144 +1386,244 @@
 </li>
 <li>
 <p><strong>Update Radio Firmware</strong>
-<img alt="Ethos Suite Interface" src="../../../assets/kyberpad/remote_ethos_suite.png" />
-<em>The Ethos Suite interface for updating your radio</em></p>
+<img alt="Ethos Suite Interface" src="../../../assets/kyberpad/remote_ethos_suite.png" /></p>
 </li>
 <li>
 <p><strong>Update Receiver</strong></p>
+<ul>
+<li>Follow the <a href="https://youtu.be/j7TQgJl_BXE?si=59ew4u_Aw6H1Fmrk">Receiver Update Guide</a> to flash your receiver</li>
+</ul>
 </li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">Receiver Update</p>
-<p>Follow the <a href="https://youtu.be/j7TQgJl_BXE?si=59ew4u_Aw6H1Fmrk">Receiver Update Guide</a> to flash your receiver through the transmitter's USB connection</p>
-</div>
 <hr />
 <h2 id="kyberpad-installation">Kyberpad Installation<a class="headerlink" href="#kyberpad-installation" title="Permanent link">&para;</a></h2>
 <h3 id="installing-the-lua-widget">Installing the LUA widget<a class="headerlink" href="#installing-the-lua-widget" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Download and extract the Kyberpad zip file</li>
-<li>On your radio's SD card:<ul>
-<li>Create a new folder named "Scripts"</li>
-<li>Copy the extracted Kyberpad files into this folder</li>
+<li>Download and extract the Kyberpad zip file<ul>
+<li>Write an email to Stephane Beaulieu stefebeaulieu@gmail.com to get the Kyberpad software </li>
+</ul>
+</li>
+<li>On your remote<ul>
+<li>Plug the USB cable to your computer.</li>
+<li>Chose Ethos Suite on the remote screen</li>
+</ul>
+</li>
+<li>On your remote SD card:<ul>
+<li>Create a new folder named "Scripts" (if not present)</li>
+<li>Copy the extracted Kyberpad files into "Scripts"</li>
+</ul>
+</li>
+<li>Restart Remote    <ul>
+<li>Unplug USB cable</li>
+<li>Long press power button (shutdown)</li>
+<li>Press again to turn it back on</li>
 </ul>
 </li>
 </ol>
-<p><img alt="SD Card Setup" src="../../../assets/kyberpad/remote_SDcard.png" />
-<em>Location of the Scripts folder on your radio's SD card</em></p>
+<p><img alt="SD Card Setup" src="../../../assets/kyberpad/remote_SDcard.png" /></p>
 <hr />
 <h2 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h2>
 <h3 id="1-create-new-model">1. Create New Model<a class="headerlink" href="#1-create-new-model" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong>Choose Model Type</strong>
-<img alt="Model Selection" src="../../../assets/kyberpad/remote1.png" />
-<em>Select "Other" as your model type - this avoids unnecessary default settings</em></p>
+<img alt="Model Selection" src="../../../assets/kyberpad/remote1.png" /></p>
+<ul>
+<li>Select "Other" as your model type - this avoids unnecessary default settings</li>
+</ul>
 </li>
 <li>
 <p><strong>Name Your Model</strong>
-<img alt="Model Naming" src="../../../assets/kyberpad/remote2.png" />
-<em>Give your model a memorable name</em></p>
+<img alt="Model Naming" src="../../../assets/kyberpad/remote2.png" /></p>
+<ul>
+<li>Give your model a memorable name</li>
+</ul>
 </li>
 </ol>
 <h3 id="2-enable-kyberpad-lua-source">2. Enable Kyberpad LUA Source<a class="headerlink" href="#2-enable-kyberpad-lua-source" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong>Access Model Settings</strong>
-<img alt="Model Page Access" src="../../../assets/kyberpad/remote3.png" />
-<em>Tap the Airplane icon on the lower screen to access model settings</em></p>
+<img alt="Model Page Access" src="../../../assets/kyberpad/remote3.png" /></p>
+<ul>
+<li>Tap the Airplane icon on the lower screen to access model settings</li>
+</ul>
 </li>
 <li>
 <p><strong>Enable LUA</strong>
-<img alt="LUA Settings" src="../../../assets/kyberpad/remote4.png" />
-<em>Swipe left to page 2, then tap the LUA box</em></p>
+<img alt="LUA Settings" src="../../../assets/kyberpad/remote4.png" /></p>
+<ul>
+<li>Swipe left to page 2, then tap the LUA box</li>
+</ul>
 </li>
 <li>
-<p><strong>Activate Kyberpad</strong>
-<img alt="Kyberpad Source" src="../../../assets/kyberpad/remote5.png" />
-<em>Enable the Kyberpad Source option</em></p>
+<p><strong>Activate Kyberpad Source</strong>
+<img alt="Kyberpad Source" src="../../../assets/kyberpad/remote5.png" /></p>
+<ul>
+<li>Enable the Kyberpad Source option</li>
+</ul>
 </li>
 </ol>
 <h3 id="3-configure-widget">3. Configure Widget<a class="headerlink" href="#3-configure-widget" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p><strong>Add Widget</strong>
-<img alt="Widget Addition" src="../../../assets/kyberpad/remote6.png" />
-<em>Tap the middle lower button (+ in box), then tap + at top left</em></p>
+<img alt="Widget addition screen showing plus icon in box button at bottom center and plus button at top left of interface" src="../../../assets/kyberpad/remote6.png" /></p>
+<ul>
+<li>Tap the middle lower button (+ in box), then tap + at top left</li>
+</ul>
 </li>
 <li>
 <p><strong>Set Display Mode</strong>
-<img alt="Full Screen Selection" src="../../../assets/kyberpad/remote7.png" />
-<em>Select "Full Screen" for optimal display</em></p>
+<img alt="Display mode selection menu with Full Screen option highlighted in the ETHOS interface" src="../../../assets/kyberpad/remote7.png" /></p>
+<ul>
+<li>Select "Full Screen" for optimal display</li>
+</ul>
 </li>
 <li>
 <p><strong>Select Widget Type</strong>
-<img alt="Widget Selection" src="../../../assets/kyberpad/remote8.png" />
-<em>Click "Change widget"</em></p>
+<img alt="Widget configuration screen showing Change widget button in the center of the display" src="../../../assets/kyberpad/remote8.png" /></p>
+<ul>
+<li>Click "Change widget"</li>
+</ul>
 </li>
 <li>
 <p><strong>Choose Kyberpad</strong>
-<img alt="Kyberpad Selection" src="../../../assets/kyberpad/remote9.png" />
-<em>Scroll down and select Kyberpad from the list</em></p>
+<img alt="Scrollable widget list with Kyberpad option visible among other available widgets" src="../../../assets/kyberpad/remote9.png" /></p>
+<ul>
+<li>Scroll down and select Kyberpad from the list</li>
+</ul>
 </li>
 </ol>
 <h3 id="4-configure-control-switches">4. Configure Control Switches<a class="headerlink" href="#4-configure-control-switches" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Set Page Toggle Switch</strong>
-<img alt="Toggle Switch Setup" src="../../../assets/kyberpad/remote10.png" />
-<em>Configure the switch for changing Kyberpad pages:</em></li>
-<li>Open the Kyberpad widget</li>
-<li>Find the Toggle source dropdown</li>
 <li>
-<p>Select a 2 or 3-position switch for page navigation</p>
+<p><strong>Set Page Toggle Switch</strong>
+<img alt="Kyberpad settings screen displaying Toggle Source: Button Pad dropdown menu with down arrow" src="../../../assets/kyberpad/remote10.png" /></p>
+<ul>
+<li>Tap on "Toggle Source: Button Pad" down arrow</li>
+</ul>
 </li>
 <li>
-<p><strong>Configure Random Mode Switch</strong>
-<img alt="Random Mode Setup" src="../../../assets/kyberpad/remote11.png" />
-<em>Set up the random mode switch using the same process</em></p>
+<p><strong>Select Toggle Switch</strong>
+<img alt="Radio transmitter interface showing physical toggle switches ready for assignment" src="../../../assets/kyberpad/remote11.png" /></p>
+<ul>
+<li>Toggle the switch you want to use on the remote</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Other Switch</strong></p>
+<ul>
+<li>Use the same process to setup random mode and and wifi switch</li>
+</ul>
 </li>
 </ol>
-<h3 id="5-configure-mix-controls">5. Configure Mix Controls<a class="headerlink" href="#5-configure-mix-controls" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Channel Setup</p>
-<p>This section configures how Kyberpad communicates with your system.</p>
-</div>
+<h3 id="5-configure-buttons">5. Configure Buttons<a class="headerlink" href="#5-configure-buttons" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Access Mix Settings</strong>
-<img alt="Mix Menu Access" src="../../../assets/kyberpad/remote12.png" />
-<em>To begin mix configuration:</em></li>
-<li>Tap the airplane button on the main screen</li>
 <li>
-<p>Select "Mixes" from the menu</p>
+<p><strong>Buttons Label</strong>
+<img alt="Button configuration screen showing Label Texte input field with on-screen keyboard interface" src="../../../assets/kyberpad/remote19.png" /></p>
+<ul>
+<li>Tap on "Label Texte" to bring up the keyboard</li>
+<li>Label your Button (use "_" to)</li>
+</ul>
+</li>
+<li>
+<p><strong>Buttons Color</strong>
+<img alt="Button customization interface displaying color picker or selection options for Button 1" src="../../../assets/kyberpad/remote20.png" /></p>
+<ul>
+<li>Use "FG" to change the color of your text</li>
+<li>Use "BG" to change the color of the background</li>
+</ul>
+</li>
+<li>
+<p><strong>Buttons Value</strong>
+<img alt="PWM value configuration screen showing numerical input field for button signal settings" src="../../../assets/kyberpad/remote21.png" /></p>
+<ul>
+<li>You can find and edit the button values under the button labels (You should not need to edit the button values)</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-other">6. Other<a class="headerlink" href="#6-other" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong><em>Haptic Feedback</em></strong>
+<img alt="Debug settings screen with toggle option to enable debug information display" src="../../../assets/kyberpad/remote22.png" /></p>
+<ul>
+<li>Enable haptic feedback on button press</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Debug</em></strong>
+<img alt="Debug settings screen with toggle option to enable debug information display" src="../../../assets/kyberpad/remote23.png" /></p>
+<ul>
+<li>Display buttons pwm value on screen</li>
+</ul>
+</li>
+<li>
+<p><strong>Battery Indicator</strong>
+<img alt="Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display" src="../../../assets/kyberpad/remote23.png" /></p>
+<ul>
+<li>Configure battery voltage Indicator on bottom line of the screen</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">To Do</p>
+<p>Add Screenshot and how to.</p>
+</div>
+<h3 id="6-configure-mix-controls">6. Configure Mix Controls<a class="headerlink" href="#6-configure-mix-controls" title="Permanent link">&para;</a></h3>
+<p>This section configures how Kyberpad communicates with your system.</p>
+<ol>
+<li>
+<p><strong>Access Mix Settings</strong>
+<img alt="Mix Menu Access" src="../../../assets/kyberpad/remote12.png" /></p>
+<ul>
+<li>Tap the airplane button on the main screen</li>
+<li>Select "Mixes" from the menu</li>
+</ul>
 </li>
 <li>
 <p><strong>Create New Mix</strong>
-<img alt="Mix Type Selection" src="../../../assets/kyberpad/remote13.png" />
-<em>Select "Free Mix" as your control type</em></p>
+<img alt="Mix Type Selection" src="../../../assets/kyberpad/remote13.png" /></p>
+<ul>
+<li>Select "Free Mix" as your control type</li>
+</ul>
 </li>
 <li>
 <p><strong>Name the Mix</strong>
-<img alt="Mix Naming" src="../../../assets/kyberpad/remote14.png" />
-<em>Enter "Kyberpad" as the mix name for easy identification</em></p>
+<img alt="Mix Naming" src="../../../assets/kyberpad/remote14.png" /></p>
+<ul>
+<li>Enter "Kyberpad" as the mix name for easy identification</li>
+</ul>
 </li>
 <li>
 <p><strong>Configure Source</strong>
-<img alt="Source Selection" src="../../../assets/kyberpad/remote15.png" />
-<em>Set up the input source:</em></p>
-</li>
+<img alt="Source Selection" src="../../../assets/kyberpad/remote15.png" /></p>
+<ul>
+<li>Set up the input source:<ul>
 <li>Open the Source dropdown menu</li>
 <li>Scroll down to find the LUA option</li>
-<li>
-<p>Select LUA as your source</p>
+<li>Select LUA as your source</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Verify Source Selection</strong>
-<img alt="Source Verification" src="../../../assets/kyberpad/remote16.png" />
-<em>Note: It's normal for the Kyberpad source to appear grayed out</em></p>
+<img alt="Source Verification" src="../../../assets/kyberpad/remote16.png" /></p>
+<ul>
+<li>Note: It's normal for the Kyberpad source to appear grayed out</li>
+</ul>
 </li>
 <li>
 <p><strong>Set Output Channel</strong>
-<img alt="Channel Selection" src="../../../assets/kyberpad/remote17.png" />
-<img alt="Final Configuration" src="../../../assets/kyberpad/remote18.png" /></p>
+<img alt="Channel Selection" src="../../../assets/kyberpad/remote17.png" /></p>
+<ul>
+<li>Click on "Output1", Channel list will appear</li>
+</ul>
+<p><img alt="Final Configuration" src="../../../assets/kyberpad/remote18.png" />
+     - Name and configuration will be assigned to the selected channel</p>
 </li>
 </ol>
 <div class="admonition info">
@@ -1485,6 +1648,70 @@
 <li>Use clear, descriptive names</li>
 <li>Document your channel assignments</li>
 </ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Change Log</p>
+<ul>
+<li><strong>Change to Version 04</strong><ul>
+<li>Add support to : X18, X18S, XE and Twin X remotes</li>
+<li>Change the default name of Btn18.png to btn01.png</li>
+</ul>
+</li>
+<li><strong>Change to Version 05</strong><ul>
+<li>Added Multi Model Support</li>
+</ul>
+</li>
+<li><strong>Change to Version 06</strong><ul>
+<li>Added WiFi ON/OFF icon on the bottom line</li>
+<li>Added Random Toggle Position on the bottom line</li>
+<li>Added PAD Toggle Position on the bottom line</li>
+</ul>
+</li>
+<li><strong>Change to Version 07</strong><ul>
+<li>Added Support for Battery 1 and 2 Voltage</li>
+<li>Changed Screen Layout for X20 and X18 Family</li>
+</ul>
+</li>
+<li><strong>Change to Version 08</strong><ul>
+<li>Added Support for Number Field for Channel PWM Output</li>
+<li>Added Release state button value</li>
+<li>Changed the Configuration Layout for each Buttons</li>
+</ul>
+</li>
+<li>
+<p><strong>Change to Version 09</strong></p>
+<p><strong>!! Thanks to Frsky Ben for it's great contribution !!</strong></p>
+<ul>
+<li>Rewrite of the code to support new ETHOS version 1.6.x</li>
+<li>Changed config file to read model path instead of model name to prevent conflicts from cloned models with same model name</li>
+<li>Consolidated Lua Kyberpad Source into main script</li>
+<li>Add support for X18RS</li>
+<li>Remove widget title to prevent hidden bottom icons</li>
+<li>Consolidated config vars for button settings to arrays</li>
+<li>Add for loop iterations for drawing functions</li>
+<li>Add inline if/then for several drawing functions</li>
+<li>Add error handling for file io read/write</li>
+<li>Fixed config file write to remove unnecessary new lines in button text</li>
+<li>Add checks for Lua Kyberpad Source disabled</li>
+<li>Fixed runonce and highlighttext variable typos</li>
+<li>Changed button text multiline to split on dot instead of space</li>
+<li>Add nil checks for battery function to resolve nil value errors</li>
+<li>Battery Alert configuration nested into panel</li>
+<li>Button Values configuration nested into panel</li>
+<li>Button color and text configuration display cleaned up</li>
+<li>Add debug option to display pressed button value percent</li>
+<li>Changed code commenting to be compatible with LDoc</li>
+</ul>
+</li>
+<li>
+<p><strong>Change to Version 10</strong></p>
+<ul>
+<li>Changed widget parameter names to use model filename for uniqueness to prevent conflicts from multiple model files using Kyberpad lua</li>
+<li>Add debug option to enable or disable Haptic button feedback</li>
+<li>Bug Fixes</li>
+</ul>
+</li>
+</ul>
 </div>
 
 
