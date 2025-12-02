@@ -79,7 +79,7 @@ Navigate to the Kyber web installer: [https://stefe2.github.io/Kyber_Installer/]
 !!! note "Browser Support"
     Google Chrome is mendatory to flash an esp32
 
-## Questions for Clarification (To do)
+## Questions for Clarification
 
 !!! question "For Project Owner"
     1. What is the current software version number?
