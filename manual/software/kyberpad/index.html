@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kyberpad-v10" class="md-skip">
+        <a href="#kyberpad-v20" class="md-skip">
           Skip to content
         </a>
       
@@ -1331,11 +1331,11 @@
   
 
 
-<h1 id="kyberpad-v10">Kyberpad V1.0<a class="headerlink" href="#kyberpad-v10" title="Permanent link">&para;</a></h1>
+<h1 id="kyberpad-v20">Kyberpad V2.0<a class="headerlink" href="#kyberpad-v20" title="Permanent link">&para;</a></h1>
 <h2 id="kyberpad-overview">Kyberpad Overview<a class="headerlink" href="#kyberpad-overview" title="Permanent link">&para;</a></h2>
 <p>The Kyberpad is designed to work with the Kyber Control System. It replace the physical 15 buttons board and remove the need to modify your remote.</p>
 <p>It's a LUA script you install on your Tandem family remote that display the 15 buttons pad on screen and let you setup the name and color for each buttons. </p>
-<p>It interact with the Kyber controller via the remote touch screen. It support a toggle switch to enable a second screen that give you access to another 15 buttons.</p>
+<p>It interact with the Kyber controller via the remote touch screen. It support a toggle switch to enable a second or third screen that give you access to another 15/30 buttons.</p>
 <h3 id="main-interface">Main Interface<a class="headerlink" href="#main-interface" title="Permanent link">&para;</a></h3>
 <p><img alt="Kyberpad Main Interface" src="../../../assets/kyberpad/kyberpad_main.png" /></p>
 <div class="admonition info">
@@ -1348,6 +1348,7 @@
 </ul>
 </li>
 <li><strong>Status Bar</strong> (Bottom Display)<ul>
+<li>Drive Enabled/Disabled  </li>
 <li>Current page number</li>
 <li>Random Toggle switch position</li>
 <li>Software version</li>
@@ -1369,7 +1370,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">ETHOS Version Support</p>
-<p>Latest firmware version: 1.6.3 (as of 11/25)</p>
+<p>Latest firmware version: 1.6.4 (as of 02/26)</p>
 </div>
 <h2 id="radio-and-receiver-update">Radio and Receiver Update<a class="headerlink" href="#radio-and-receiver-update" title="Permanent link">&para;</a></h2>
 <h3 id="1-check-firmware-version">1. Check Firmware Version<a class="headerlink" href="#1-check-firmware-version" title="Permanent link">&para;</a></h3>
@@ -1420,6 +1421,17 @@
 </ul>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Upgrading from an older version</p>
+<ul>
+<li>Make a copy of your configuration file under config directory</li>
+<li>Take note of your configuration (*)</li>
+<li>Delete the old Kyberpad and Kyberpad Source folder</li>
+<li>Write new Kyberpad folder to SD card</li>
+<li>Copy your config file in config folder</li>
+</ul>
+<p>(*) I tried my best to import config files in the new version but sadly the results are inconsistent. You may have to redo the configuration. </p>
+</div>
 <p><img alt="SD Card Setup" src="../../../assets/kyberpad/remote_SDcard.png" /></p>
 <hr />
 <h2 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h2>
@@ -1540,7 +1552,7 @@
 <p><strong>Buttons Value</strong>
 <img alt="PWM value configuration screen showing numerical input field for button signal settings" src="../../../assets/kyberpad/remote21.png" /></p>
 <ul>
-<li>You can find and edit the button values under the button labels (You should not need to edit the button values)</li>
+<li>You can edit the button values (You should not need to edit the button values but in case of a special setup you have the possibility to do so)</li>
 </ul>
 </li>
 </ol>
@@ -1562,16 +1574,22 @@
 </li>
 <li>
 <p><strong>Battery Indicator</strong>
-<img alt="Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display" src="../../../assets/kyberpad/remote23.png" /></p>
+<img alt="Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display" src="../../../assets/kyberpad/remote24.png" /></p>
 <ul>
-<li>Configure battery voltage Indicator on bottom line of the screen</li>
+<li>Select the Sensor using the drop down menu</li>
+<li>Set Low and Critical depending on the type of battery you use</li>
 </ul>
 </li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">To Do</p>
-<p>Add Screenshot and how to.</p>
+<p class="admonition-title">Exemple for a 2S LIPO battery</p>
+<ul>
+<li>Fully Charged = 8.4V</li>
+<li>Low = +- 7.60V</li>
+<li>Critical = 7.37V </li>
+</ul>
 </div>
+<p><img alt="Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display" src="../../../assets/kyberpad/Battery_Chart.png" /></p>
 <h3 id="6-configure-mix-controls">6. Configure Mix Controls<a class="headerlink" href="#6-configure-mix-controls" title="Permanent link">&para;</a></h3>
 <p>This section configures how Kyberpad communicates with your system.</p>
 <ol>
@@ -1641,7 +1659,8 @@
 <ol>
 <li>Create separate "Free Mix" entries for each function:<ul>
 <li>Drive system controls</li>
-<li>Dome movement controls</li>
+<li>PAD 2-3 Selction Toggle</li>
+<li>Random Functions Toggle</li>
 </ul>
 </li>
 <li>Use the same process as above</li>
@@ -1652,34 +1671,34 @@
 <div class="admonition question">
 <p class="admonition-title">Change Log</p>
 <ul>
-<li><strong>Change to Version 04</strong><ul>
+<li><strong>Change to Version 0.4</strong><ul>
 <li>Add support to : X18, X18S, XE and Twin X remotes</li>
 <li>Change the default name of Btn18.png to btn01.png</li>
 </ul>
 </li>
-<li><strong>Change to Version 05</strong><ul>
+<li><strong>Change to Version 0.5</strong><ul>
 <li>Added Multi Model Support</li>
 </ul>
 </li>
-<li><strong>Change to Version 06</strong><ul>
+<li><strong>Change to Version 0.6</strong><ul>
 <li>Added WiFi ON/OFF icon on the bottom line</li>
 <li>Added Random Toggle Position on the bottom line</li>
 <li>Added PAD Toggle Position on the bottom line</li>
 </ul>
 </li>
-<li><strong>Change to Version 07</strong><ul>
+<li><strong>Change to Version 0.7</strong><ul>
 <li>Added Support for Battery 1 and 2 Voltage</li>
 <li>Changed Screen Layout for X20 and X18 Family</li>
 </ul>
 </li>
-<li><strong>Change to Version 08</strong><ul>
+<li><strong>Change to Version 0.8</strong><ul>
 <li>Added Support for Number Field for Channel PWM Output</li>
 <li>Added Release state button value</li>
 <li>Changed the Configuration Layout for each Buttons</li>
 </ul>
 </li>
 <li>
-<p><strong>Change to Version 09</strong></p>
+<p><strong>Change to Version 1.0</strong></p>
 <p><strong>!! Thanks to Frsky Ben for it's great contribution !!</strong></p>
 <ul>
 <li>Rewrite of the code to support new ETHOS version 1.6.x</li>
@@ -1688,27 +1707,32 @@
 <li>Add support for X18RS</li>
 <li>Remove widget title to prevent hidden bottom icons</li>
 <li>Consolidated config vars for button settings to arrays</li>
-<li>Add for loop iterations for drawing functions</li>
-<li>Add inline if/then for several drawing functions</li>
 <li>Add error handling for file io read/write</li>
-<li>Fixed config file write to remove unnecessary new lines in button text</li>
 <li>Add checks for Lua Kyberpad Source disabled</li>
-<li>Fixed runonce and highlighttext variable typos</li>
 <li>Changed button text multiline to split on dot instead of space</li>
-<li>Add nil checks for battery function to resolve nil value errors</li>
 <li>Battery Alert configuration nested into panel</li>
-<li>Button Values configuration nested into panel</li>
 <li>Button color and text configuration display cleaned up</li>
 <li>Add debug option to display pressed button value percent</li>
-<li>Changed code commenting to be compatible with LDoc</li>
 </ul>
 </li>
 <li>
-<p><strong>Change to Version 10</strong></p>
+<p><strong>Change to Version 2.0</strong></p>
 <ul>
-<li>Changed widget parameter names to use model filename for uniqueness to prevent conflicts from multiple model files using Kyberpad lua</li>
-<li>Add debug option to enable or disable Haptic button feedback</li>
-<li>Bug Fixes</li>
+<li>Extended button support from 30 to 45 buttons</li>
+<li>Implemented 3-page system (15 buttons per page)</li>
+<li>Replaced WiFi toggle with Drive Enabled/Disabled toggle</li>
+<li>Localized all global variables (icon, icon2, dialog, and all icon bitmaps)</li>
+<li>Optimized icon loading (conditional loading based on file size &gt;1Ko)</li>
+<li>Added critical nil checks for sources and icon arrays</li>
+<li>Fixed file handling (added file:close(), created safeFileOpen wrapper)</li>
+<li>Extracted magic numbers into CONSTANTS table (PWM, channels, dimensions, events)</li>
+<li>Refactored wakeup() with checkSourceValue() helper function</li>
+<li>Modified Battery display with dynamic colored fill (empty icon + rectangle fill)</li>
+<li>Added backward compatibility for v1.0 config files (migration system)</li>
+<li>Added configurable PAD switch type (2 or 3 positions)</li>
+<li>Dynamic button configuration display (15/30/45 buttons based on PAD config)</li>
+<li>Default PAD is set to 2</li>
+<li>Changed random icons</li>
 </ul>
 </li>
 </ul>
