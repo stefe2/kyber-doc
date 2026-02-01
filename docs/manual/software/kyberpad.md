@@ -1,11 +1,11 @@
-# Kyberpad V1.0
+# Kyberpad V2.0
 ## Kyberpad Overview
 
 The Kyberpad is designed to work with the Kyber Control System. It replace the physical 15 buttons board and remove the need to modify your remote.
 
 It's a LUA script you install on your Tandem family remote that display the 15 buttons pad on screen and let you setup the name and color for each buttons. 
 
-It interact with the Kyber controller via the remote touch screen. It support a toggle switch to enable a second screen that give you access to another 15 buttons.
+It interact with the Kyber controller via the remote touch screen. It support a toggle switch to enable a second or third screen that give you access to another 15/30 buttons.
 
 ### Main Interface
 ![Kyberpad Main Interface](../../assets/kyberpad/kyberpad_main.png)
@@ -16,6 +16,7 @@ It interact with the Kyber controller via the remote touch screen. It support a 
         - 3 pages of buttons (45 buttons total)
         - Customizable name and color for each button
     * **Status Bar** (Bottom Display)
+        - Drive Enabled/Disabled  
         - Current page number
         - Random Toggle switch position
         - Software version
@@ -30,7 +31,7 @@ It interact with the Kyber controller via the remote touch screen. It support a 
      - https://www.facebook.com/groups/1341505756182087
 
 !!! note "ETHOS Version Support"
-    Latest firmware version: 1.6.3 (as of 11/25)
+    Latest firmware version: 1.6.4 (as of 02/26)
 
 ## Radio and Receiver Update
 
@@ -67,6 +68,15 @@ If your firmware is outdated:
     - Unplug USB cable
     - Long press power button (shutdown)
     - Press again to turn it back on
+
+!!! note "Upgrading from an older version"
+    - Make a copy of your configuration file under config directory
+    - Take note of your configuration (*)
+    - Delete the old Kyberpad and Kyberpad Source folder
+    - Write new Kyberpad folder to SD card
+    - Copy your config file in config folder
+    
+    (*) I tried my best to import config files in the new version but sadly the results are inconsistent. You may have to redo the configuration. 
 
 ![SD Card Setup](../../assets/kyberpad/remote_SDcard.png)
 
@@ -143,7 +153,7 @@ If your firmware is outdated:
 
 3. **Buttons Value**
 ![PWM value configuration screen showing numerical input field for button signal settings](../../assets/kyberpad/remote21.png)
-     - You can find and edit the button values under the button labels (You should not need to edit the button values)
+     - You can edit the button values (You should not need to edit the button values but in case of a special setup you have the possibility to do so)
 
 ### 6. Other
 
@@ -156,11 +166,16 @@ If your firmware is outdated:
      - Display buttons pwm value on screen
 
 3. **Battery Indicator**
-![Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display](../../assets/kyberpad/remote23.png)
-     - Configure battery voltage Indicator on bottom line of the screen
+![Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display](../../assets/kyberpad/remote24.png)
+     - Select the Sensor using the drop down menu
+     - Set Low and Critical depending on the type of battery you use
 
-!!! note "To Do"
-    Add Screenshot and how to.
+!!! note "Exemple for a 2S LIPO battery"
+    - Fully Charged = 8.4V
+    - Low = +- 7.60V
+    - Critical = 7.37V 
+
+![Battery voltage indicator configuration screen showing telemetry source selection for bottom status line display](../../assets/kyberpad/Battery_Chart.png)
 
 ### 6. Configure Mix Controls
 
@@ -209,29 +224,30 @@ This section configures how Kyberpad communicates with your system.
 
      1. Create separate "Free Mix" entries for each function:
          - Drive system controls
-         - Dome movement controls
+         - PAD 2-3 Selction Toggle
+         - Random Functions Toggle
      2. Use the same process as above
      3. Use clear, descriptive names
      4. Document your channel assignments
 
 !!! question "Change Log"
-    - **Change to Version 04**
+    - **Change to Version 0.4**
          - Add support to : X18, X18S, XE and Twin X remotes
          - Change the default name of Btn18.png to btn01.png
-    - **Change to Version 05**
+    - **Change to Version 0.5**
          - Added Multi Model Support
-    - **Change to Version 06**
+    - **Change to Version 0.6**
          - Added WiFi ON/OFF icon on the bottom line
          - Added Random Toggle Position on the bottom line
          - Added PAD Toggle Position on the bottom line
-    - **Change to Version 07**
+    - **Change to Version 0.7**
          - Added Support for Battery 1 and 2 Voltage
          - Changed Screen Layout for X20 and X18 Family
-    - **Change to Version 08**
+    - **Change to Version 0.8**
          - Added Support for Number Field for Channel PWM Output
          - Added Release state button value
          - Changed the Configuration Layout for each Buttons
-    - **Change to Version 09**
+    - **Change to Version 1.0**
         
          **!! Thanks to Frsky Ben for it's great contribution !!**
 
@@ -241,20 +257,25 @@ This section configures how Kyberpad communicates with your system.
          - Add support for X18RS
          - Remove widget title to prevent hidden bottom icons
          - Consolidated config vars for button settings to arrays
-         - Add for loop iterations for drawing functions
-         - Add inline if/then for several drawing functions
          - Add error handling for file io read/write
-         - Fixed config file write to remove unnecessary new lines in button text
          - Add checks for Lua Kyberpad Source disabled
-         - Fixed runonce and highlighttext variable typos
          - Changed button text multiline to split on dot instead of space
-         - Add nil checks for battery function to resolve nil value errors
          - Battery Alert configuration nested into panel
-         - Button Values configuration nested into panel
          - Button color and text configuration display cleaned up
          - Add debug option to display pressed button value percent
-         - Changed code commenting to be compatible with LDoc
-    - **Change to Version 10**
-         - Changed widget parameter names to use model filename for uniqueness to prevent conflicts from multiple model files using Kyberpad lua
-         - Add debug option to enable or disable Haptic button feedback
-         - Bug Fixes
+    - **Change to Version 2.0**
+         - Extended button support from 30 to 45 buttons
+         - Implemented 3-page system (15 buttons per page)
+         - Replaced WiFi toggle with Drive Enabled/Disabled toggle
+         - Localized all global variables (icon, icon2, dialog, and all icon bitmaps)
+         - Optimized icon loading (conditional loading based on file size >1Ko)
+         - Added critical nil checks for sources and icon arrays
+         - Fixed file handling (added file:close(), created safeFileOpen wrapper)
+         - Extracted magic numbers into CONSTANTS table (PWM, channels, dimensions, events)
+         - Refactored wakeup() with checkSourceValue() helper function
+         - Modified Battery display with dynamic colored fill (empty icon + rectangle fill)
+         - Added backward compatibility for v1.0 config files (migration system)
+         - Added configurable PAD switch type (2 or 3 positions)
+         - Dynamic button configuration display (15/30/45 buttons based on PAD config)
+         - Default PAD is set to 2
+         - Changed random icons
