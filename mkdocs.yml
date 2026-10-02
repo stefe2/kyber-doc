@@ -56,7 +56,14 @@ nav:
           - Basic Controls: manual/usage/basic-controls.md
           - Advanced Features: manual/usage/advanced-features.md
           - Sound Configuration: manual/usage/sound-config.md
-  - FAQ: faq.md
+  - FAQ:
+      - Overview: faq/index.md
+      - KyberPad & Remote Control: faq/kyberpad.md
+      - Sounds & Audio: faq/sounds.md
+      - Hardware & Wiring: faq/hardware.md
+      - Software & Firmware: faq/software.md
+      - Troubleshooting: faq/troubleshooting.md
+      - Getting Started: faq/getting-started.md
   - About: about.md
 
 markdown_extensions:
